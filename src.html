@@ -163,6 +163,23 @@ section{padding-block:104px}
 .li h3 small{font-weight:400;color:var(--muted);font-size:.78rem;margin-left:8px}
 .li p{font-size:.86rem;color:var(--muted);margin-top:6px}
 
+/* ===== DONE (activities) ===== */
+.done-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:230px;gap:14px}
+.ph{position:relative;margin:0;border-radius:10px;overflow:hidden;background:var(--soft);min-width:0}
+.ph img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+.ph:hover img{transform:scale(1.03)}
+.ph.w2{grid-column:span 2}.ph.h2{grid-row:span 2}
+.ph.contain{background:#fff;border:1px solid var(--line)}
+.ph.contain img{object-fit:contain;padding:10px}
+.ph figcaption{position:absolute;left:0;right:0;bottom:0;padding:34px 14px 12px;background:linear-gradient(transparent,rgba(20,20,22,.72));color:#fff}
+.ph figcaption small{display:inline-block;font-size:.68rem;letter-spacing:.08em;padding:2px 8px;border-radius:999px;background:rgba(255,255,255,.22)}
+.ph figcaption small.edu{background:#8A2A33}
+.ph figcaption b{display:block;font-size:.92rem;font-weight:600;margin-top:6px;line-height:1.45}
+.posters-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin:56px 0 18px}
+.posters-head h3{font-size:1.2rem;font-weight:500}
+.posters{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px}
+.posters img{width:100%;aspect-ratio:700/970;object-fit:cover;border-radius:8px;border:1px solid var(--line);background:#fff}
+
 /* ===== PAY ===== */
 .pay-sec{background:var(--soft)}
 .pay{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
@@ -233,9 +250,13 @@ footer .edu .mark{height:22px}
   .rung:nth-child(5){grid-column:1/-1}
   .perks{grid-template-columns:repeat(2,minmax(0,1fr))}
   .pay{grid-template-columns:minmax(0,1fr)}
+  .done-grid{grid-auto-rows:190px}
 }
 @media (max-width:640px){
   section{padding-block:72px}
+  .done-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:170px;gap:10px}
+  .posters-wrap{overflow-x:auto;margin-inline:-20px;padding-inline:20px}
+  .posters{grid-template-columns:repeat(5,140px)}
   .dept{margin-top:72px}
   .panel{min-height:660px}
   .panel .photo{right:-22%;height:52%}
@@ -362,6 +383,37 @@ footer .edu .mark{height:22px}
         <div class="li"><h3>導生關懷制度</h3><p>從適應工作、累積病例到找專科方向，每個階段都有導師陪你一起想。</p></div>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="done" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">我們做過的事</p><h2 class="h2">課程、討論會，還有一起吃飯的時候</h2></div>
+      <p class="lead" style="max-width:26em">這些都是真實辦過的活動，照片取自聯盟教育中心招募說明會簡報。</p>
+    </div>
+    <div class="done-grid">
+      <figure class="ph w2 h2"><img src="photos/act-spring-all.jpg" alt="POA 公司春酒・全體合照" loading="lazy"><figcaption><small>團隊</small><b>POA 公司春酒・全體合照</b></figcaption></figure>
+      <figure class="ph w2"><img src="photos/act-eye-hands.jpg" alt="眼科實作課程：實際上手操作" loading="lazy"><figcaption><small class="edu">教育中心</small><b>眼科實作課程：實際上手操作</b></figcaption></figure>
+      <figure class="ph "><img src="photos/act-eye-group.jpg" alt="眼科實作課程結業合照" loading="lazy"><figcaption><small class="edu">教育中心</small><b>眼科實作課程結業合照</b></figcaption></figure>
+      <figure class="ph "><img src="photos/act-teaching.jpg" alt="學長姐貼身教學與實作" loading="lazy"><figcaption><small class="edu">總院教學</small><b>學長姐貼身教學與實作</b></figcaption></figure>
+      <figure class="ph "><img src="photos/act-nutrition-group.jpg" alt="專科營養獸醫師現場授課" loading="lazy"><figcaption><small class="edu">教育中心</small><b>專科營養獸醫師現場授課</b></figcaption></figure>
+      <figure class="ph w2"><img src="photos/act-kim-group.jpg" alt="金信權醫師｜犬貓老年疾病與安寧照顧" loading="lazy"><figcaption><small class="edu">教育中心</small><b>金信權醫師｜犬貓老年疾病與安寧照顧</b></figcaption></figure>
+      <figure class="ph "><img src="photos/act-kim-discussion.jpg" alt="北部辦公室現場病例討論" loading="lazy"><figcaption><small class="edu">教育中心</small><b>北部辦公室現場病例討論</b></figcaption></figure>
+      <figure class="ph w2"><img src="photos/act-live.jpg" alt="醫師上直播談衛教" loading="lazy"><figcaption><small>個人品牌</small><b>醫師上直播談衛教</b></figcaption></figure>
+      <figure class="ph "><img src="photos/act-dinner.jpg" alt="每季聚餐" loading="lazy"><figcaption><small>福利</small><b>每季聚餐</b></figcaption></figure>
+      <figure class="ph contain"><img src="photos/act-guideline-flow.jpg" alt="討論會產出的臨床流程表" loading="lazy"><figcaption><small class="edu">Guideline</small><b>討論會產出的臨床流程表</b></figcaption></figure>
+      <figure class="ph w2"><img src="photos/act-spring-stage.jpg" alt="春酒「運營」舞台" loading="lazy"><figcaption><small>團隊</small><b>春酒「運營」舞台</b></figcaption></figure>
+      <figure class="ph w2"><img src="photos/act-nutrition-team.jpg" alt="營養課程後與講師合影" loading="lazy"><figcaption><small class="edu">教育中心</small><b>營養課程後與講師合影</b></figcaption></figure>
+    </div>
+    <div class="posters-head"><h3>最近討論過的主題</h3><span class="eyebrow">Guideline 討論會・卓越講堂</span></div>
+    <div class="posters-wrap"><div class="posters">
+      <img src="photos/poster-ckd.jpg" alt="Guideline 討論會：慢性腎臟病貧血與鐵代謝管理" loading="lazy">
+      <img src="photos/poster-lepto.jpg" alt="Guideline 討論會：ACVIM 犬鉤端螺旋體共識" loading="lazy">
+      <img src="photos/poster-htn.jpg" alt="Guideline 討論會：ACVIM 犬貓高血壓共識" loading="lazy">
+      <img src="photos/poster-us.jpg" alt="卓越講堂：消化道超音波" loading="lazy">
+      <img src="photos/poster-lame.jpg" alt="卓越講堂：前肢跛行的系統評估與定位" loading="lazy">
+    </div></div>
   </div>
 </section>
 
