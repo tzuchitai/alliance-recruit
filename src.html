@@ -268,6 +268,37 @@ section{padding-block:104px}
 .br.here{background:var(--gold-tint)}
 .br.here .you{display:inline-block;margin-top:10px;font-size:.7rem;font-weight:600;color:var(--gold-ink);letter-spacing:.06em}
 
+/* ===== CHAIN VALUE ===== */
+.val-tier{margin-top:34px}
+.val-tier h3{font-size:1.05rem;font-weight:600;display:flex;align-items:center;gap:10px}
+.val-tier h3 span{font-size:.7rem;letter-spacing:.14em;color:var(--gold-ink);font-weight:600}
+.val-grid{display:grid;gap:14px;margin-top:14px}
+.val-grid.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.val-grid.c4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.vc{border-radius:12px;border:1px solid var(--line);border-top:4px solid var(--gold);background:var(--bg);padding:20px 20px 22px;min-width:0}
+.vc.dk{border-top-color:#6B3A1F}
+.vc b{display:block;font-size:1.05rem;font-weight:600}
+.vc ul{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:8px;font-size:.86rem;color:var(--muted)}
+.vc li{position:relative;padding-left:18px}
+.vc li::before{content:"✦";position:absolute;left:0;top:.1em;color:var(--gold-ink);font-size:.8em}
+.vc em{font-style:normal;color:var(--gold-ink);font-weight:600}
+@media (max-width:1000px){.val-grid.c3,.val-grid.c4{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.val-grid.c3,.val-grid.c4{grid-template-columns:minmax(0,1fr)}}
+
+/* ===== FAQ ===== */
+.faq-cat{margin-top:30px}
+.faq-cat h3{font-size:.78rem;letter-spacing:.14em;font-weight:600;color:var(--gold-ink);margin-bottom:8px}
+.faq details{border-bottom:1px solid var(--line)}
+.faq details:first-of-type{border-top:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 4px;font-weight:600;font-size:.98rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:var(--gold-tint);color:var(--gold-ink);font-weight:500;transition:transform .2s}
+.faq details[open] summary::after{content:"−"}
+.faq summary:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.faq .a{padding:0 4px 18px;font-size:.92rem;color:var(--muted);max-width:52em}
+.faq .a a{color:var(--gold-ink);font-weight:600}
+.faq-more{margin-top:28px;border-radius:12px;background:var(--gold-tint);padding:20px 24px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-size:.92rem}
+
 /* ===== BRANCHES ===== */
 .dept{background:var(--soft);margin-top:104px}
 .dept-grid{display:grid;grid-template-columns:300px minmax(0,1fr);gap:56px;align-items:start}
@@ -649,7 +680,7 @@ footer .edu .mark{height:22px}
 <section class="home" id="home">
   <div class="wrap">
     <div class="home-head"><div><p class="eyebrow">從這裡開始</p><h2 class="h2">你想先了解哪一部分？</h2></div><p class="lead" style="max-width:24em">點選有興趣的主題，或從左上角「目錄」隨時切換。</p></div>
-    <div class="tiles"><div class="tile-c"><span class="n">01</span><h3>認識聯盟</h3><p>我們是誰、由誰創立、事業版圖</p><ul><li><a href="#about">聯盟簡介</a></li><li><a href="#founder">創辦人</a></li><li><a href="#group">寵物百分百事業群</a></li></ul></div><div class="tile-c hot"><span class="n">02</span><h3>職缺與分院</h3><p>正在招募的職位與各院專科方向</p><ul><li><a href="#jobs">公告中的職缺</a></li><li><a href="#branches">各分院定位</a></li></ul></div><div class="tile-c"><span class="n">03</span><h3>職涯與培育</h3><p>升遷路徑、學習制度與專科發展</p><ul><li><a href="#philosophy">職涯主軸</a></li><li><a href="#ladder">職涯成長階梯</a></li><li><a href="#learning">學習與培育制度</a></li><li><a href="#eye">眼科種子與線上討論會</a></li><li><a href="#advisors">醫療顧問</a></li></ul></div><div class="tile-c"><span class="n">04</span><h3>工作與待遇</h3><p>薪資福利、工作環境與團隊日常</p><ul><li><a href="#pay">薪資與福利</a></li><li><a href="#environment">工作環境</a></li><li><a href="#done">我們做過的事</a></li><li><a href="#honest">先說清楚的事</a></li></ul></div><div class="tile-c"><span class="n">05</span><h3>加入我們</h3><p>教育中心的話與應徵方式</p><ul><li><a href="#apply">教育中心的話・應徵</a></li></ul></div></div>
+    <div class="tiles"><div class="tile-c"><span class="n">01</span><h3>認識聯盟</h3><p>我們是誰、由誰創立、事業版圖</p><ul><li><a href="#about">聯盟簡介</a></li><li><a href="#value">連鎖體系的價值</a></li><li><a href="#founder">創辦人</a></li><li><a href="#group">寵物百分百事業群</a></li></ul></div><div class="tile-c hot"><span class="n">02</span><h3>職缺與分院</h3><p>正在招募的職位與各院專科方向</p><ul><li><a href="#jobs">公告中的職缺</a></li><li><a href="#branches">各分院定位</a></li></ul></div><div class="tile-c"><span class="n">03</span><h3>職涯與培育</h3><p>升遷路徑、學習制度與專科發展</p><ul><li><a href="#philosophy">職涯主軸</a></li><li><a href="#ladder">職涯成長階梯</a></li><li><a href="#learning">學習與培育制度</a></li><li><a href="#eye">眼科種子與線上討論會</a></li><li><a href="#advisors">醫療顧問</a></li></ul></div><div class="tile-c"><span class="n">04</span><h3>工作與待遇</h3><p>薪資福利、工作環境與團隊日常</p><ul><li><a href="#pay">薪資與福利</a></li><li><a href="#environment">工作環境</a></li><li><a href="#done">我們做過的事</a></li><li><a href="#honest">先說清楚的事</a></li></ul></div><div class="tile-c"><span class="n">05</span><h3>加入我們</h3><p>常見問題、教育中心的話與應徵方式</p><ul><li><a href="#faq">常見問題</a></li><li><a href="#apply">教育中心的話・應徵</a></li></ul></div></div>
   </div>
 </section>
 <section id="about" style="padding-bottom:0">
@@ -699,6 +730,30 @@ footer .edu .mark{height:22px}
         <div class="motto"><b>For you and them</b><span>為人與動物創造福祉，是百分百創立的宗旨。</span></div>
         <div class="values"><span>專業</span><span>熱情</span><span>紀律</span></div>
         <div class="founder-team"><img src="photos/founder-team.jpg" alt="聯盟動物醫院的醫師們" loading="lazy"><p>「守護寵物的健康」是獸醫師誓詞，也是我們每天在診間落實的事。</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="value">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">連鎖醫療體系的價值</p><h2 class="h2">一個體系，能給醫師什麼？</h2></div>
+      <p class="lead" style="max-width:28em">飼主對連鎖醫院的期待，是醫師最好的後盾；體系的制度，則讓醫師專心把病看好、把路走長。</p>
+    </div>
+    <div class="val-tier"><h3><span>FOR OWNERS</span>飼主信任的基礎</h3>
+      <div class="val-grid c3">
+        <div class="vc"><b>一致標準化</b><ul><li>走進任何一間分院，一般醫療都能得到<em>一致的品質</em></li><li>體系與教育中心規範的<em>醫療分級</em>，為飼主多一層把關</li><li>飼主的<em>信任感</em>，是全科醫師最重要的資產</li></ul></div>
+        <div class="vc dk"><b>專業醫療</b><ul><li><em>專科分級</em>，提供飼主更深度的醫療選擇與精準治療</li><li>有系統地<em>提供衛教</em>，增加飼主對體系的好感與信任</li></ul></div>
+        <div class="vc"><b>連鎖保障</b><ul><li>遇到複雜醫療問題時，背後有<em>一整個體系的醫療專業人員</em>隨時支援與會診</li></ul></div>
+      </div>
+    </div>
+    <div class="val-tier"><h3><span>FOR DOCTORS</span>醫師能得到的</h3>
+      <div class="val-grid c4">
+        <div class="vc"><b>多醫師互相交流</b><ul><li>體系內有更多<em>醫師夥伴分享臨床經驗</em>、討論困難病例</li><li>透過 M&amp;M、主題討論與跨院轉診回饋，<em>快速累積臨床判斷力與視野</em></li></ul></div>
+        <div class="vc dk"><b>參與打造醫療制度</b><ul><li>醫師不只是執行者，而是<em>能參與制度與流程設計</em>的共同創造者</li><li>任何建議或改善提案，聯盟都願意<em>聽見並一起優化</em>，讓制度成為你的後盾</li></ul></div>
+        <div class="vc"><b>專注專業，不被瑣事綁住</b><ul><li>醫療與行政明確分工，讓醫師<em>專心在臨床與進修</em></li><li>想發展的專科（如腫瘤、眼科、心臟），可以<em>提出申請，體系協助找資源</em></li></ul></div>
+        <div class="vc dk"><b>有制度的職涯與晉升</b><ul><li>清楚的職級：<em>住院醫師 → 主治醫師 → 資深主治／教學職／管理職</em>，各有對應條件與支援</li><li>醫療教學、專科主責、院區管理，<em>都有可循的成長路徑</em></li></ul></div>
       </div>
     </div>
   </div>
@@ -1052,6 +1107,36 @@ footer .edu .mark{height:22px}
   </div>
 </section>
 
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">常見問題</p><h2 class="h2">應徵前，你可能想問的事</h2></div>
+      <p class="lead" style="max-width:26em">點選問題看答案。沒找到想問的，填表單或寄信給教育中心，我們會直接回覆你。</p>
+    </div>
+    <div class="faq">
+      <div class="faq-cat"><h3>體系與文化</h3>
+        <details><summary>連鎖醫院會不會有業績壓力，被要求推檢查？</summary><div class="a">不會。我們要求的是做醫療該做的事：依病情提出合理的檢查與治療選項，陪伴動物與家長一起做出最適切的選擇。不為業績推診，必要的醫療也不打折扣。</div></details>
+        <details><summary>醫療決策是醫師自己決定，還是照 SOP？</summary><div class="a">以國際醫療指引為依據，例如 ACVIM 等專科共識。醫師在指引的基礎上依個別病例判斷；遇到複雜病例，可以會診，也可以帶到 <a href="#learning">Guideline 與 M&amp;M 討論會</a>一起討論。</div></details>
+        <details><summary>遇到醫療糾紛，醫院會怎麼支援？</summary><div class="a">有客服團隊支援，協助與飼主溝通並處理後續，醫師不需要獨自面對。病例也可以帶到臨床難題討論會（M&amp;M）回顧，一起找到下次更好的做法。</div></details>
+        <details><summary>美國院有交流或外派的機會嗎？</summary><div class="a">有。加入體系、認真投入的醫師，有機會獲得外派到<a href="#usa">美國加州院</a>的機會。</div></details>
+      </div>
+      <div class="faq-cat"><h3>薪資與工時</h3>
+        <details><summary>沒有經驗可以應徵嗎？</summary><div class="a">可以。無經驗起薪 45,000 元，通過健診醫師評核後調升至 50,000 元。詳見<a href="#pay">薪資與福利</a>。</div></details>
+        <details><summary>主治醫師的收入怎麼算？可以核對嗎？</summary><div class="a">主治採高保底、高抽成，收入區間約 6–18 萬。抽成規則事先說明，業績歸屬與計算明細清楚可查，也有明確的核對與更正管道。</div></details>
+        <details><summary>一個月排幾班？加班怎麼算？</summary><div class="a">採四週排班與變形工時，主治週工時約 40 小時，排班可與同事協調。超時正常給付加班費，也可以申請補休。大夜班為 4 週 160 小時、約 16 班。</div></details>
+        <details><summary>休假怎麼安排？</summary><div class="a">依法提供特休，生日當月有生日假。年資滿一年可向院長申請 15 天喘息連假（不帶薪），每年一次。</div></details>
+      </div>
+      <div class="faq-cat"><h3>學習與發展</h3>
+        <details><summary>剛到職的第一個月會做什麼？有人帶嗎？</summary><div class="a">有。學長姐會帶你跟診、旁診觀摩，看診後給回饋；導生關懷制度也會安排導師，從適應工作到找專科方向都有人陪。</div></details>
+        <details><summary>從住院醫師到主治大概要多久？</summary><div class="a">參考時間是住院醫師約 3–6 個月、健診醫師約 6–9 個月，之後成為主治醫師。實際依個人進度與考核結果調整，詳見<a href="#ladder">職涯成長階梯</a>。</div></details>
+        <details><summary>想發展專科，要怎麼申請？</summary><div class="a">主治醫師考核通過兩年後，可以申請專科種子醫師計畫，例如<a href="#eye">眼科種子醫師計畫</a>。計畫約兩到三年，第二年可開始獨立接專科門診。</div></details>
+        <details><summary>各院設備不同，遇到需要進階檢查的病例怎麼辦？</summary><div class="a">仁武總院有 24H 夜間急診、CT 與內視鏡，是各院的醫療後盾。需要時可以轉院或跨院會診，不必一個人處理。</div></details>
+      </div>
+    </div>
+    <div class="faq-more"><span>還有其他問題？面談時都可以直接問。</span><a class="btn gold" href="https://forms.gle/SVXiBVjkQ3kXTBmr6" target="_blank" rel="noopener">填寫應徵表單 ↗</a></div>
+  </div>
+</section>
+
 <section id="apply" style="padding-top:0">
   <div class="wrap">
     <div class="msg">
@@ -1082,7 +1167,7 @@ footer .edu .mark{height:22px}
 <div class="scrim" id="scrim"></div>
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="網站目錄" hidden>
   <div class="dh"><b>想看哪一部分？</b><button type="button" id="menu-close" aria-label="關閉目錄">×</button></div>
-  <nav><div class="dg"><p>認識聯盟</p><a href="#about" data-sec="about">聯盟簡介</a><a href="#founder" data-sec="founder">創辦人</a><a href="#group" data-sec="group">寵物百分百事業群</a></div><div class="dg"><p>職缺與分院</p><a href="#jobs" data-sec="jobs">公告中的職缺</a><a href="#branches" data-sec="branches">各分院定位</a></div><div class="dg"><p>職涯與培育</p><a href="#philosophy" data-sec="philosophy">職涯主軸</a><a href="#ladder" data-sec="ladder">職涯成長階梯</a><a href="#learning" data-sec="learning">學習與培育制度</a><a href="#eye" data-sec="eye">眼科種子與線上討論會</a><a href="#advisors" data-sec="advisors">醫療顧問</a></div><div class="dg"><p>工作與待遇</p><a href="#pay" data-sec="pay">薪資與福利</a><a href="#environment" data-sec="environment">工作環境</a><a href="#done" data-sec="done">我們做過的事</a><a href="#honest" data-sec="honest">先說清楚的事</a></div><div class="dg"><p>加入我們</p><a href="#apply" data-sec="apply">教育中心的話・應徵</a></div></nav>
+  <nav><div class="dg"><p>認識聯盟</p><a href="#about" data-sec="about">聯盟簡介</a><a href="#value" data-sec="value">連鎖體系的價值</a><a href="#founder" data-sec="founder">創辦人</a><a href="#group" data-sec="group">寵物百分百事業群</a></div><div class="dg"><p>職缺與分院</p><a href="#jobs" data-sec="jobs">公告中的職缺</a><a href="#branches" data-sec="branches">各分院定位</a></div><div class="dg"><p>職涯與培育</p><a href="#philosophy" data-sec="philosophy">職涯主軸</a><a href="#ladder" data-sec="ladder">職涯成長階梯</a><a href="#learning" data-sec="learning">學習與培育制度</a><a href="#eye" data-sec="eye">眼科種子與線上討論會</a><a href="#advisors" data-sec="advisors">醫療顧問</a></div><div class="dg"><p>工作與待遇</p><a href="#pay" data-sec="pay">薪資與福利</a><a href="#environment" data-sec="environment">工作環境</a><a href="#done" data-sec="done">我們做過的事</a><a href="#honest" data-sec="honest">先說清楚的事</a></div><div class="dg"><p>加入我們</p><a href="#faq" data-sec="faq">常見問題</a><a href="#apply" data-sec="apply">教育中心的話・應徵</a></div></nav>
   <div class="df"><a class="btn gold" href="https://forms.gle/SVXiBVjkQ3kXTBmr6" target="_blank" rel="noopener">填寫應徵表單 ↗</a><a class="top" href="#home">回到首頁</a></div>
 </aside>
 <footer><div class="wrap"><span class="edu"><span class="mark edu" aria-hidden="true"></span>EDUCATION CENTER</span><span>聯盟動物醫院 · 寵物百分百股份有限公司 · 聯盟教育中心　照片：聯盟動物醫院官網</span></div></footer>
@@ -1133,8 +1218,8 @@ const BRANCHES = [
    people:[], phone:"07-7518876", jd:true,
    jobs:[["主治獸醫師","6–14 萬＋抽成"],["大夜班主治（急診）","15 萬起＋抽成"]]},
   {id:"usa",rz:"美國",name:"美國加州院",city:"美國加州",focus:"海外院所",
-   pos:"聯盟動物醫院在美國加州的院所，與台灣各院同屬聯盟體系。",
-   tags:["美國加州","海外據點"],
+   pos:"聯盟動物醫院在美國加州的院所，與台灣各院同屬聯盟體系。加入體系、認真投入的醫師，有機會獲得外派機會。",
+   tags:["美國加州","海外據點","外派機會"],
    people:[], photo:["photos/us-hospital.jpg","美國加州院外觀"],
    jobs:[]},
 ];
@@ -1251,7 +1336,7 @@ render(hi >= 0 ? hi : cur, false);
   drawer.addEventListener("click", e => { if (e.target.closest("a[href^='#']")) shut(false); });
 
   const hero = document.querySelector("header.hero"), home = document.getElementById("home");
-  const pageIds = ["about","group","branches","jobs","career","learning","advisors","environment","done","pay","honest","apply"];
+  const pageIds = ["about","value","group","branches","jobs","career","learning","advisors","environment","done","pay","honest","faq","apply"];
   const pages = pageIds.map(id => document.getElementById(id)).filter(Boolean);
   const parentOf = {founder: "about", philosophy: "career", ladder: "career", eye: "learning"};
   BRANCHES.forEach(b => parentOf[b.id] = "branches");
