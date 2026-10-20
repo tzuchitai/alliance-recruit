@@ -269,6 +269,55 @@ section{padding-block:104px}
 .br.here .you{display:inline-block;margin-top:10px;font-size:.7rem;font-weight:600;color:var(--gold-ink);letter-spacing:.06em}
 
 /* ===== CHAIN VALUE ===== */
+/* value chain */
+/* porter value chain */
+.porter{display:grid;grid-template-columns:minmax(0,1fr) 150px;margin-top:40px;align-items:stretch}
+.pt-main{min-width:0}
+.pt-k{margin:0 0 10px;font-size:.78rem;font-weight:600;color:var(--ink);display:flex;align-items:baseline;gap:10px}
+.pt-k span{font-size:.66rem;letter-spacing:.16em;color:var(--gold-ink)}
+.pt-k.second{margin-top:26px}
+.pt-sup{display:grid;gap:8px;margin-right:-28px;padding-right:44px}
+.pt-sup>div{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;padding:13px 22px;border-radius:10px;background:var(--soft);border:1px solid var(--line)}
+.pt-sup b{flex:none;min-width:6.5em;font-size:.95rem;font-weight:600}
+.pt-sup span{font-size:.86rem;color:var(--muted)}
+.pt-pri{display:flex}
+.pt-pri .ch{flex:1;min-width:0;position:relative;min-height:132px;padding:20px 22px 20px 42px;color:#1F2328;background:#EBB649;clip-path:polygon(0 0,calc(100% - 26px) 0,100% 50%,calc(100% - 26px) 100%,0 100%,26px 50%)}
+.pt-pri .ch:first-child{padding-left:24px;clip-path:polygon(0 0,calc(100% - 26px) 0,100% 50%,calc(100% - 26px) 100%,0 100%)}
+.pt-pri .ch+.ch{margin-left:-6px}
+.pt-pri .ch:nth-child(even){background:#F3CE7A}
+.pt-pri .ch i{display:block;font-style:normal;font-weight:200;font-size:1.5rem;line-height:1;letter-spacing:-.03em}
+.pt-pri .ch b{display:block;margin-top:8px;font-size:1.02rem;font-weight:600}
+.pt-pri .ch span{display:block;margin-top:4px;font-size:.78rem;line-height:1.55;color:#3A3526}
+.pt-out{display:flex;flex-direction:column;justify-content:center;gap:4px;margin-left:-26px;padding:20px 22px 20px 52px;background:#1F2328;color:#fff;clip-path:polygon(0 0,calc(100% - 34px) 0,100% 50%,calc(100% - 34px) 100%,0 100%,26px 50%)}
+.pt-out small{font-size:.64rem;letter-spacing:.18em;font-weight:600;color:#EBB649}
+.pt-out b{font-size:1.25rem;font-weight:600;line-height:1.3}
+.pt-out span{font-size:.76rem;color:#B9BEC4}
+@media (max-width:1000px){
+  .porter{grid-template-columns:minmax(0,1fr)}
+  .pt-sup{margin-right:0;padding-right:0}
+  .pt-pri{flex-direction:column;gap:8px}
+  .pt-pri .ch,.pt-pri .ch:first-child{min-height:0;padding:16px 20px;clip-path:none;border-radius:10px}
+  .pt-pri .ch+.ch{margin-left:0}
+  .pt-out{margin:8px 0 0;padding:18px 20px;clip-path:none;border-radius:12px}
+}
+.vloop{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:14px;border-radius:14px;background:var(--gold-tint);padding:18px 26px}
+.vloop .lp{flex:none;font-size:1.5rem;line-height:1;color:var(--gold-ink)}
+.vloop b{font-size:1.02rem;font-weight:600}
+.vloop span{font-size:.86rem;color:var(--muted)}
+.vstats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:40px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.vstats div{padding:26px 24px;text-align:center}
+.vstats div+div{border-left:1px solid var(--line)}
+.vstats b{display:block;font-weight:200;font-size:clamp(2.2rem,4.4vw,3.2rem);line-height:1;letter-spacing:-.03em}
+.vstats small{display:block;margin-top:8px;font-size:.8rem;color:var(--muted)}
+.vcmp{margin-top:40px;border-radius:14px;border:1px solid var(--line);overflow:hidden}
+.vcmp .r{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr) minmax(0,1.4fr)}
+.vcmp .r>div{padding:15px 22px;font-size:.88rem;min-width:0;border-top:1px solid var(--line)}
+.vcmp .r:first-child>div{border-top:0;font-size:.74rem;letter-spacing:.12em;font-weight:600;color:var(--muted);background:var(--soft)}
+.vcmp .r>div:first-child{font-weight:600}
+.vcmp .r>div:nth-child(2){color:var(--muted)}
+.vcmp .r>div:nth-child(3){background:var(--gold-tint);font-weight:500}
+.vcmp .r:first-child>div:nth-child(3){color:var(--gold-ink);background:var(--gold-tint)}
+@media (max-width:640px){.vstats{grid-template-columns:minmax(0,1fr)}.vstats div+div{border-left:0;border-top:1px solid var(--line)}.vcmp .r{grid-template-columns:minmax(0,1fr)}.vcmp .r>div{padding:10px 18px;border-top:0}.vcmp .r>div:first-child{padding-top:14px;border-top:1px solid var(--line)}.vcmp .r:first-child{display:none}.vcmp .r>div:nth-child(2)::before{content:"一般單點診所：";font-size:.74rem}.vcmp .r>div:nth-child(3)::before{content:"聯盟體系：";font-size:.74rem;color:var(--gold-ink);font-weight:600}}
 .val-tier{margin-top:34px}
 .val-tier h3{font-size:1.05rem;font-weight:600;display:flex;align-items:center;gap:10px}
 .val-tier h3 span{font-size:.7rem;letter-spacing:.14em;color:var(--gold-ink);font-weight:600}
@@ -356,6 +405,7 @@ section{padding-block:104px}
 .jd h3{font-size:1.45rem;font-weight:500;margin-top:4px}
 .jd .badge{font-size:.72rem;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--gold);color:#1F2328;white-space:nowrap}
 .jd .pay{font-weight:300;font-size:clamp(2rem,3.6vw,2.6rem);letter-spacing:-.02em;line-height:1.1;display:block}
+.jd .jd-note{font-size:.84rem;line-height:1.7;color:var(--muted);margin-top:-10px}
 .jd .pay small{font-size:.36em;font-weight:500;margin-left:6px;letter-spacing:0}
 .facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
 .facts div{border-radius:8px;background:var(--soft);padding:10px 12px;min-width:0}
@@ -757,8 +807,41 @@ footer .edu .mark{height:22px}
 <section id="value">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="eyebrow">連鎖醫療體系的價值</p><h2 class="h2">一個體系，能給醫師什麼？</h2></div>
+      <div><p class="eyebrow">連鎖醫療體系的價值鏈</p><h2 class="h2">一個體系，能給醫師什麼？</h2></div>
       <p class="lead" style="max-width:28em">飼主對連鎖醫院的期待，是醫師最好的後盾；體系的制度，則讓醫師專心把病看好、把路走長。</p>
+    </div>
+    <div class="porter" role="group" aria-label="聯盟體系的價值鏈">
+      <div class="pt-main">
+        <p class="pt-k">支持活動<span>SUPPORT ACTIVITIES</span></p>
+        <div class="pt-sup">
+          <div><b>教育中心</b><span>醫療分級、規範與審核</span></div>
+          <div><b>人才培育</b><span>專科種子計畫、顧問指導、卓越講堂</span></div>
+          <div><b>跨院網絡</b><span>轉診、會診與跨院討論</span></div>
+          <div><b>營運與行政</b><span>醫療與行政明確分工，醫師專心看診與進修</span></div>
+        </div>
+        <p class="pt-k second">主要活動<span>PRIMARY ACTIVITIES</span></p>
+        <div class="pt-pri">
+          <div class="ch"><i>01</i><b>標準化臨床</b><span>走進任何一間分院，都有一致的醫療品質與分級把關</span></div>
+          <div class="ch"><i>02</i><b>集體討論</b><span>M&amp;M、主題討論，以及每月與美國內科專科醫師討論病例</span></div>
+          <div class="ch"><i>03</i><b>專科與教學</b><span>專科種子醫師計畫、卓越講堂與清楚的教學職級</span></div>
+          <div class="ch"><i>04</i><b>職涯與回報</b><span>明確的晉升路徑，與事先說明、明細可查的抽成規則</span></div>
+        </div>
+      </div>
+      <div class="pt-out"><small>OUTCOME</small><b>醫師價值</b><span>專業、成長、回報</span></div>
+    </div>
+    <div class="vloop"><span class="lp" aria-hidden="true">↻</span><div><b>飼主信任，回到第一步</b><br><span>一致的品質累積口碑，帶來更多病例，讓醫師有更多機會把專業做深。</span></div></div>
+    <div class="vstats">
+      <div><b>9＋1</b><small>台灣 9 間、美國 1 間分院</small></div>
+      <div><b>每月 2 次</b><small>美國內科專科病例討論</small></div>
+      <div><b>每 2 週</b><small>線上眼科討論會</small></div>
+    </div>
+    <div class="vcmp" role="table" aria-label="一般單點診所與聯盟體系的比較">
+      <div class="r" role="row"><div>面向</div><div>一般單點診所</div><div>聯盟體系</div></div>
+      <div class="r" role="row"><div>病例討論</div><div>多半限於院內少數同事</div><div>跨院固定討論，並有外部專科醫師參與</div></div>
+      <div class="r" role="row"><div>專科發展</div><div>常需自行找資源與機會</div><div>可提出申請，由體系協助找資源</div></div>
+      <div class="r" role="row"><div>行政與營運</div><div>醫師常需兼顧</div><div>醫療與行政明確分工，專心看診與進修</div></div>
+      <div class="r" role="row"><div>職涯發展</div><div>受限於單一診所的規模</div><div>清楚職級，含教學、專科與管理路徑</div></div>
+      <div class="r" role="row"><div>複雜病例</div><div>多半由自己判斷與承擔</div><div>背後有整個體系的專業人員支援與會診</div></div>
     </div>
     <div class="val-tier"><h3><span>FOR OWNERS</span>飼主信任的基礎</h3>
       <div class="val-grid c3">
@@ -851,6 +934,7 @@ footer .edu .mark{height:22px}
       <article class="jd night">
         <div class="top"><div><span class="where">建國分院／台北籌備院・固定大夜班</span><h3>大夜班主治獸醫師（急診）</h3></div><span class="badge">夜間急診</span></div>
         <span class="pay">15 萬起<small>月薪，搭配業績抽成</small></span>
+        <p class="jd-note muted">建國分院：新進醫師先從白班開始，待熟悉院內流程與醫療原則後，再與院方討論轉任夜間急診。薪資依實際職責與班別調整。</p>
         <div class="facts">
           <div><b>時段</b><span>21:30–09:30（含 2 小時用餐）</span></div>
           <div><b>工時</b><span>4 週變形工時 160 小時，約 16 班</span></div>
