@@ -271,34 +271,43 @@ section{padding-block:104px}
 /* ===== CHAIN VALUE ===== */
 /* value chain */
 /* porter value chain */
-.porter{display:grid;grid-template-columns:minmax(0,1fr) 150px;margin-top:40px;align-items:stretch}
-.pt-main{min-width:0}
-.pt-k{margin:0 0 10px;font-size:.78rem;font-weight:600;color:var(--ink);display:flex;align-items:baseline;gap:10px}
-.pt-k span{font-size:.66rem;letter-spacing:.16em;color:var(--gold-ink)}
-.pt-k.second{margin-top:26px}
-.pt-sup{display:grid;gap:8px;margin-right:-28px;padding-right:44px}
-.pt-sup>div{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;padding:13px 22px;border-radius:10px;background:var(--soft);border:1px solid var(--line)}
-.pt-sup b{flex:none;min-width:6.5em;font-size:.95rem;font-weight:600}
-.pt-sup span{font-size:.86rem;color:var(--muted)}
-.pt-pri{display:flex}
-.pt-pri .ch{flex:1;min-width:0;position:relative;min-height:132px;padding:20px 22px 20px 42px;color:#1F2328;background:#EBB649;clip-path:polygon(0 0,calc(100% - 26px) 0,100% 50%,calc(100% - 26px) 100%,0 100%,26px 50%)}
-.pt-pri .ch:first-child{padding-left:24px;clip-path:polygon(0 0,calc(100% - 26px) 0,100% 50%,calc(100% - 26px) 100%,0 100%)}
-.pt-pri .ch+.ch{margin-left:-6px}
-.pt-pri .ch:nth-child(even){background:#F3CE7A}
-.pt-pri .ch i{display:block;font-style:normal;font-weight:200;font-size:1.5rem;line-height:1;letter-spacing:-.03em}
-.pt-pri .ch b{display:block;margin-top:8px;font-size:1.02rem;font-weight:600}
-.pt-pri .ch span{display:block;margin-top:4px;font-size:.78rem;line-height:1.55;color:#3A3526}
-.pt-out{display:flex;flex-direction:column;justify-content:center;gap:4px;margin-left:-26px;padding:20px 22px 20px 52px;background:#1F2328;color:#fff;clip-path:polygon(0 0,calc(100% - 34px) 0,100% 50%,calc(100% - 34px) 100%,0 100%,26px 50%)}
-.pt-out small{font-size:.64rem;letter-spacing:.18em;font-weight:600;color:#EBB649}
-.pt-out b{font-size:1.25rem;font-weight:600;line-height:1.3}
-.pt-out span{font-size:.76rem;color:#B9BEC4}
+.porter{display:grid;grid-template-columns:52px minmax(0,1fr) 236px;grid-template-rows:auto auto;gap:14px;margin-top:40px}
+.pt-side{display:flex;align-items:center;justify-content:center;border-radius:12px;background:#1F2328;color:#fff;writing-mode:vertical-rl;letter-spacing:.42em;font-size:.86rem;font-weight:600}
+.pt-side.gold{background:#EBB649;color:#1F2328}
+.pt-sup{grid-column:2;display:grid;gap:10px;min-width:0}
+.pt-bar{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:12px 20px;border-radius:12px;background:var(--soft);border:1px solid var(--line);min-width:0}
+.pt-bar .ic{flex:none;width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:var(--bg);border:1px solid var(--line);color:var(--gold-ink)}
+.pt-bar .ic svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+.pt-bar b{flex:none;min-width:5.6em;font-size:.98rem;font-weight:600}
+.pt-bar .tags{display:flex;gap:8px;flex-wrap:wrap}
+.pt-bar .tags span{font-size:.78rem;padding:3px 12px;border-radius:999px;background:var(--bg);border:1px solid var(--line);color:var(--muted);white-space:nowrap}
+.pt-pri{grid-column:2;display:flex;min-width:0}
+.pt-pri .ch{flex:1;min-width:0;min-height:156px;padding:22px 20px 22px 44px;color:#1F2328;clip-path:polygon(0 0,calc(100% - 28px) 0,100% 50%,calc(100% - 28px) 100%,0 100%,28px 50%)}
+.pt-pri .ch:first-child{padding-left:26px;clip-path:polygon(0 0,calc(100% - 28px) 0,100% 50%,calc(100% - 28px) 100%,0 100%)}
+.pt-pri .ch+.ch{margin-left:-8px}
+.pt-pri .ch:nth-child(1){background:#F8E2AE}
+.pt-pri .ch:nth-child(2){background:#F2CD72}
+.pt-pri .ch:nth-child(3){background:#EBB649}
+.pt-pri .ch:nth-child(4){background:#DC9D1E}
+.pt-pri .ch i{display:block;font-style:normal;font-weight:200;font-size:2rem;line-height:1;letter-spacing:-.04em}
+.pt-pri .ch b{display:block;margin-top:10px;font-size:1.06rem;font-weight:600}
+.pt-pri .ch span{display:block;margin-top:5px;font-size:.8rem;line-height:1.6;color:#33300F}
+.pt-out{grid-column:3;grid-row:1/3;display:flex;flex-direction:column;justify-content:center;gap:6px;padding:26px 48px 26px 28px;color:#fff;background:#1F2328;clip-path:polygon(0 0,calc(100% - 44px) 0,100% 50%,calc(100% - 44px) 100%,0 100%);border-radius:12px 0 0 12px}
+.pt-out small{font-size:.66rem;letter-spacing:.2em;font-weight:600;color:#EBB649}
+.pt-out b{font-size:1.5rem;font-weight:600;line-height:1.25}
+.pt-out ul{list-style:none;margin:12px 0 0;padding:12px 0 0;border-top:1px solid #3A3E44;display:grid;gap:9px}
+.pt-out li{font-size:.78rem;line-height:1.5;color:#B9BEC4}
+.pt-out li b{display:block;font-size:.84rem;color:#EBB649;font-weight:600;margin:0}
+.pt-side.sup{grid-row:1}
+.pt-side.pri{grid-row:2}
 @media (max-width:1000px){
-  .porter{grid-template-columns:minmax(0,1fr)}
-  .pt-sup{margin-right:0;padding-right:0}
+  .porter{grid-template-columns:minmax(0,1fr);grid-template-rows:none}
+  .pt-side{writing-mode:horizontal-tb;letter-spacing:.3em;padding:10px;grid-row:auto!important}
+  .pt-sup,.pt-pri,.pt-out{grid-column:1;grid-row:auto}
   .pt-pri{flex-direction:column;gap:8px}
   .pt-pri .ch,.pt-pri .ch:first-child{min-height:0;padding:16px 20px;clip-path:none;border-radius:10px}
   .pt-pri .ch+.ch{margin-left:0}
-  .pt-out{margin:8px 0 0;padding:18px 20px;clip-path:none;border-radius:12px}
+  .pt-out{padding:20px;clip-path:none;border-radius:12px}
 }
 .vloop{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:14px;border-radius:14px;background:var(--gold-tint);padding:18px 26px}
 .vloop .lp{flex:none;font-size:1.5rem;line-height:1;color:var(--gold-ink)}
@@ -811,23 +820,23 @@ footer .edu .mark{height:22px}
       <p class="lead" style="max-width:28em">飼主對連鎖醫院的期待，是醫師最好的後盾；體系的制度，則讓醫師專心把病看好、把路走長。</p>
     </div>
     <div class="porter" role="group" aria-label="聯盟體系的價值鏈">
-      <div class="pt-main">
-        <p class="pt-k">支持活動<span>SUPPORT ACTIVITIES</span></p>
-        <div class="pt-sup">
-          <div><b>教育中心</b><span>醫療分級、規範與審核</span></div>
-          <div><b>人才培育</b><span>專科種子計畫、顧問指導、卓越講堂</span></div>
-          <div><b>跨院網絡</b><span>轉診、會診與跨院討論</span></div>
-          <div><b>營運與行政</b><span>醫療與行政明確分工，醫師專心看診與進修</span></div>
-        </div>
-        <p class="pt-k second">主要活動<span>PRIMARY ACTIVITIES</span></p>
-        <div class="pt-pri">
-          <div class="ch"><i>01</i><b>標準化臨床</b><span>走進任何一間分院，都有一致的醫療品質與分級把關</span></div>
-          <div class="ch"><i>02</i><b>集體討論</b><span>M&amp;M、主題討論，以及每月與美國內科專科醫師討論病例</span></div>
-          <div class="ch"><i>03</i><b>專科與教學</b><span>專科種子醫師計畫、卓越講堂與清楚的教學職級</span></div>
-          <div class="ch"><i>04</i><b>職涯與回報</b><span>明確的晉升路徑，與事先說明、明細可查的抽成規則</span></div>
-        </div>
+      <div class="pt-side sup">支持活動</div>
+      <div class="pt-sup">
+        <div class="pt-bar"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 5-3 8-7 10-4-2-7-5-7-10V6l7-3z"/><path d="M9 12l2 2 4-4"/></svg></span><b>教育中心</b><div class="tags"><span>醫療分級</span><span>規範</span><span>審核</span></div></div>
+        <div class="pt-bar"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></span><b>人才培育</b><div class="tags"><span>專科種子計畫</span><span>顧問指導</span><span>卓越講堂</span></div></div>
+        <div class="pt-bar"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M8 6h8M7 8l4 8M17 8l-4 8"/></svg></span><b>跨院網絡</b><div class="tags"><span>轉診</span><span>會診</span><span>跨院討論</span></div></div>
+        <div class="pt-bar"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2M3 13h18"/></svg></span><b>營運與行政</b><div class="tags"><span>醫療與行政分工</span><span>專心看診與進修</span></div></div>
       </div>
-      <div class="pt-out"><small>OUTCOME</small><b>醫師價值</b><span>專業、成長、回報</span></div>
+      <div class="pt-side gold pri">主要活動</div>
+      <div class="pt-pri">
+        <div class="ch"><i>01</i><b>標準化臨床</b><span>每間分院都有一致的醫療品質與分級把關</span></div>
+        <div class="ch"><i>02</i><b>集體討論</b><span>M&amp;M、主題討論，與每月美國內科專科病例討論</span></div>
+        <div class="ch"><i>03</i><b>專科與教學</b><span>專科種子計畫、卓越講堂與清楚的教學職級</span></div>
+        <div class="ch"><i>04</i><b>職涯與回報</b><span>清楚的晉升路徑，與明細可查的抽成規則</span></div>
+      </div>
+      <div class="pt-out"><small>OUTCOME</small><b>醫師價值</b>
+        <ul><li><b>專業</b>臨床判斷力與視野</li><li><b>成長</b>專科與教學路徑</li><li><b>回報</b>透明、可查的抽成</li></ul>
+      </div>
     </div>
     <div class="vloop"><span class="lp" aria-hidden="true">↻</span><div><b>飼主信任，回到第一步</b><br><span>一致的品質累積口碑，帶來更多病例，讓醫師有更多機會把專業做深。</span></div></div>
     <div class="vstats">
