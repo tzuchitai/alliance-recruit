@@ -486,6 +486,13 @@ section{padding-block:104px}
 .pc ul{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:8px;font-size:.86rem}
 .pc li{display:flex;gap:10px}
 .pc li::before{content:"";flex:none;width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:.65em}
+.fair{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:28px;align-items:center;margin-top:18px;border-radius:12px;background:var(--bg);border:1px solid var(--line);border-left:4px solid var(--gold);padding:26px 28px}
+.fair .k{font-size:.72rem;letter-spacing:.16em;font-weight:600;color:var(--gold-ink)}
+.fair h3{font-size:1.25rem;font-weight:600;margin-top:6px}
+.fair p{font-size:.92rem;color:var(--muted)}
+.fair ul{margin:12px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.fair li{font-size:.8rem;font-weight:600;padding:5px 12px;border-radius:999px;background:var(--gold-tint);color:var(--gold-ink)}
+@media (max-width:760px){.fair{grid-template-columns:minmax(0,1fr);gap:12px;padding:22px}}
 .perks{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:18px}
 .perk{border-radius:10px;background:var(--bg);border:1px solid var(--line);padding:18px 20px;min-width:0}
 .perk b{display:block;font-size:.9rem;font-weight:600}
@@ -822,7 +829,7 @@ footer .edu .mark{height:22px}
         <div class="tri main"><span class="en">CASE</span><h3>專業成長</h3><p class="say">醫術有升級</p>
           <ul><li>Guideline、M&amp;M、卓越講堂制度化學習</li><li>每月與美國內科專科醫師討論病例</li><li>專科種子醫師計畫與顧問指導</li></ul></div>
         <div class="tri"><span class="en">CAREER</span><h3>價值回報</h3><p class="say">荷包有感覺</p>
-          <ul><li>主治高保底、高抽成，收入反映專業</li><li>勞健保、勞退依實際薪資投保</li><li>團體分紅、績優與三節獎金</li></ul></div>
+          <ul><li>主治高保底、高抽成，收入反映專業</li><li>抽成規則事先說明，計算明細可查</li><li>勞健保、勞退依實際薪資投保</li><li>團體分紅、績優與三節獎金</li></ul></div>
         <div class="tri"><span class="en">LIFE</span><h3>永續職涯</h3><p class="say">人生有下班</p>
           <ul><li>四週排班、變形工時，排班可協調</li><li>年資滿一年可申請 15 天喘息連假</li><li>行政營運由體系處理，醫師專心看診</li></ul></div>
       </div>
@@ -1006,6 +1013,13 @@ footer .edu .mark{height:22px}
         <ul><li>高保底，累積病患初期也有穩定收入</li><li>高抽成、無上限，反映看診量與專業</li><li>行銷資源協助專長定位與曝光</li><li>協助規劃衛教講座與對外演講</li></ul></div>
       <div class="pc"><div class="who">院長</div><div class="amt">職務<small>加給</small></div>
         <ul><li>職務加給與績效回饋</li><li>人資、財務、行銷、設備有團隊支援</li><li>管理培訓與跨院主管交流</li><li>持續臨床與專科發展</li></ul></div>
+    </div>
+    <div class="fair">
+      <div><span class="k">TRANSPARENT PAY</span><h3>每一份專業付出，都有合理回報</h3></div>
+      <div>
+        <p>我們重視每一份專業付出的合理回報。抽成規則事先說明，業績歸屬與計算明細清楚可查，讓醫師知道每筆收入如何計算，也有明確的核對與更正管道。</p>
+        <ul><li>抽成規則事先說明</li><li>業績歸屬清楚</li><li>計算明細可查</li><li>有核對與更正管道</li></ul>
+      </div>
     </div>
     <div class="perks">
       <div class="perk"><b>喘息連假</b><span>年資滿一年可申請 15 天（不帶薪），每年一次</span></div>
