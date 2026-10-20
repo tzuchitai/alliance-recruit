@@ -227,6 +227,33 @@ section{padding-block:104px}
 .how{margin-top:14px;border-radius:12px;background:var(--gold-tint);padding:20px 24px;display:flex;gap:10px 28px;flex-wrap:wrap;font-size:.86rem}
 .how b{font-weight:600}
 
+/* ===== CAREER PHILOSOPHY ===== */
+.why{margin-bottom:88px}
+.why-head{text-align:center;max-width:40em;margin:0 auto}
+.why-head .h2{margin-top:8px}
+.why-head .lead{margin:14px auto 0}
+.triad{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:40px}
+.triad::before{content:"";position:absolute;left:16%;right:16%;top:50%;height:2px;background:var(--gold);opacity:.5;z-index:0}
+.tri{position:relative;z-index:1;border-radius:16px;background:var(--gold-tint);padding:28px 26px;text-align:center;min-width:0;border:1px solid rgba(235,182,73,.45)}
+.tri.main{background:var(--bg);border:2px solid var(--gold)}
+.tri .en{font-size:.72rem;letter-spacing:.2em;font-weight:600;color:var(--gold-ink)}
+.tri h3{font-size:1.5rem;font-weight:600;margin-top:6px}
+.tri .say{font-size:.92rem;color:var(--muted);margin-top:4px}
+.tri ul{margin:16px 0 0;padding:14px 0 0;border-top:1px solid rgba(142,98,8,.2);list-style:none;display:grid;gap:6px;font-size:.84rem;text-align:left}
+.tri li{display:flex;gap:8px}
+.tri li::before{content:"✓";color:var(--gold-ink);font-weight:700}
+.must{display:flex;justify-content:center;margin-top:22px}
+.must span{display:inline-flex;align-items:center;gap:10px;font-size:.92rem;font-weight:500;background:#1F2328;color:#fff;padding:10px 20px;border-radius:999px}
+.must b{color:#EBB649;font-weight:600}
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 36px;margin-top:56px;border-top:1px solid var(--line)}
+.pl{padding:24px 0;border-bottom:1px solid var(--line);min-width:0}
+.pl .k{display:flex;align-items:baseline;gap:10px}
+.pl .k b{font-size:1.12rem;font-weight:600}
+.pl .k span{font-size:.72rem;letter-spacing:.16em;color:var(--gold-ink);font-weight:600;text-transform:uppercase}
+.pl ul{margin:10px 0 0;padding:0;list-style:none;display:grid;gap:6px;font-size:.86rem;color:var(--muted)}
+.pl li{display:flex;gap:9px}
+.pl li::before{content:"";flex:none;width:5px;height:5px;border-radius:50%;background:var(--gold);margin-top:.7em}
+
 /* ===== CAREER ===== */
 .sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
 .sec-head .h2{margin-top:8px}
@@ -364,6 +391,7 @@ footer .edu .mark{height:22px}
 @keyframes fade{from{opacity:.35}}
 
 @media (max-width:1000px){
+  .pillars{grid-template-columns:repeat(2,minmax(0,1fr))}
   .eye{grid-template-columns:minmax(0,1fr)}
   .adv{grid-template-columns:minmax(0,1fr)}
   .founder{grid-template-columns:minmax(0,1fr);gap:28px}
@@ -387,6 +415,9 @@ footer .edu .mark{height:22px}
 }
 @media (max-width:640px){
   section{padding-block:72px}
+  .triad,.pillars{grid-template-columns:minmax(0,1fr)}
+  .triad::before{left:50%;right:auto;top:8%;bottom:8%;width:2px;height:auto}
+  .why{margin-bottom:64px}
   .ov-row{grid-template-columns:minmax(0,1fr);gap:2px}
   .seed,.meet{padding:22px}
   .seed dl{grid-template-columns:minmax(0,1fr)}
@@ -586,6 +617,32 @@ footer .edu .mark{height:22px}
 
 <section id="career">
   <div class="wrap">
+    <div class="why">
+      <div class="why-head">
+        <p class="eyebrow">我們怎麼看獸醫職涯</p>
+        <h2 class="h2"><span class="nb">專業成長、價值回報、永續職涯，</span><span class="nb">三個都不能少</span></h2>
+        <p class="lead">認真、有實力的醫師，需要的不只是一份薪水。我們在意的是你五年後成為什麼樣的醫師，以及這條路走不走得長。</p>
+      </div>
+      <div class="triad">
+        <div class="tri main"><span class="en">CASE</span><h3>專業成長</h3><p class="say">醫術有升級</p>
+          <ul><li>Guideline、M&amp;M、卓越講堂制度化學習</li><li>每月與美國內科專科醫師討論病例</li><li>專科種子醫師計畫與顧問指導</li></ul></div>
+        <div class="tri"><span class="en">CAREER</span><h3>價值回報</h3><p class="say">荷包有感覺</p>
+          <ul><li>主治高保底、高抽成，收入反映專業</li><li>勞健保、勞退依實際薪資投保</li><li>團體分紅、績優與三節獎金</li></ul></div>
+        <div class="tri"><span class="en">LIFE</span><h3>永續職涯</h3><p class="say">人生有下班</p>
+          <ul><li>四週排班、變形工時，排班可協調</li><li>年資滿一年可申請 15 天喘息連假</li><li>行政營運由體系處理，醫師專心看診</li></ul></div>
+      </div>
+      <div class="must"><span><b>缺一不可</b>學得到真功夫・付出有合理回報・也能好好過生活</span></div>
+
+      <div class="pillars">
+        <div class="pl"><div class="k"><b>教育</b><span>Education</span></div><ul><li>卓越講堂、Guideline 共學、M&amp;M 討論會制度化學習</li><li>可申請進修獎金與專科發展計畫，例如種子醫師制度</li><li>教學顧問、模擬門診考核、共讀書會</li></ul></div>
+        <div class="pl"><div class="k"><b>技能</b><span>Skills</span></div><ul><li>跟診與實戰經驗傳承</li><li>參與衛教撰寫、演講訓練與講座，累積公開表達能力</li><li>醫療流程制度化，穩定熟練 SOP 與臨床決策</li></ul></div>
+        <div class="pl"><div class="k"><b>經驗</b><span>Experience</span></div><ul><li>多院所共同討論，接觸多樣化的病患與醫療情境</li><li>體系間轉院合作、跨院教學參與</li><li>從困難案例中學習、撰寫與報告，有經驗醫師指導</li></ul></div>
+        <div class="pl"><div class="k"><b>目標</b><span>Goals</span></div><ul><li>主治醫師晉升機制與個人職涯發展協助</li><li>依個人志向進行專科規劃</li><li>一起建立正確的醫療價值與更進階的醫療發展</li></ul></div>
+        <div class="pl"><div class="k"><b>價值</b><span>Values</span></div><ul><li>重視團隊討論、跨院交流與共識醫療品質</li><li>尊重每位醫師的職涯方向，提供資源發展個人專長</li><li>鼓勵醫師參與指導、傳承與制度建設，真正參與體系成長</li></ul></div>
+        <div class="pl"><div class="k"><b>興趣</b><span>Interests</span></div><ul><li>依興趣參與領域共學與進修</li><li>支持分科合作，集合力量發展有興趣的項目</li><li>支持自發提案，協助執行進修或教學計畫</li></ul></div>
+      </div>
+    </div>
+
     <div class="sec-head">
       <div><p class="eyebrow">職涯成長階梯</p><h2 class="h2">每一階，都有對應的條件與考核</h2></div>
       <p class="lead" style="max-width:26em">考核時間是參考值，實際依個人進度與考核結果調整。</p>
