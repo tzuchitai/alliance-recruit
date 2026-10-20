@@ -116,6 +116,10 @@ section{padding-block:104px}
 .founder{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:56px;align-items:center;margin-top:72px}
 .founder-pic{position:relative;border-radius:14px;background:linear-gradient(170deg,#F3EBDD,#E2D2B4);aspect-ratio:4/4.4;overflow:hidden;min-width:0}
 .founder-pic img.cut{position:absolute;left:50%;bottom:0;height:94%;width:auto;max-width:none;transform:translateX(-50%);mix-blend-mode:multiply}
+.founder-pic .sigbar{position:absolute;left:16px;right:16px;bottom:16px;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px 18px;border-radius:12px;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 10px 30px -14px rgba(60,40,10,.4)}
+.founder-pic .sigbar .sig{flex:none;width:44%;max-width:190px;aspect-ratio:508/276;background:#1F2328;-webkit-mask:url(photos/signature.png) center/contain no-repeat;mask:url(photos/signature.png) center/contain no-repeat}
+.founder-pic .sigbar .who{text-align:right;font-size:.7rem;color:#5A5F66;line-height:1.55;letter-spacing:.04em}
+.founder-pic .sigbar .who b{display:block;font-size:.74rem;letter-spacing:.2em;color:#8E6208;font-weight:600}
 .founder-pic .tag{position:absolute;left:16px;top:16px;font-size:.72rem;font-weight:600;letter-spacing:.08em;background:#fff;color:#1F2328;padding:5px 12px;border-radius:999px}
 .founder-txt{min-width:0}
 .founder-txt .name{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-top:8px}
@@ -127,10 +131,6 @@ section{padding-block:104px}
 .motto span{display:block;font-size:.88rem;color:var(--muted);margin-top:4px}
 .values{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
 .values span{font-size:.82rem;font-weight:600;padding:6px 14px;border-radius:999px;background:var(--gold-tint);color:var(--gold-ink)}
-.signoff{display:flex;align-items:flex-end;gap:18px;margin-top:26px;flex-wrap:wrap}
-.signoff .sig{width:200px;aspect-ratio:508/276;background:var(--ink);-webkit-mask:url(photos/signature.png) center/contain no-repeat;mask:url(photos/signature.png) center/contain no-repeat;transform:rotate(-4deg)}
-.signoff .who{border-left:2px solid var(--gold);padding-left:12px;font-size:.78rem;color:var(--muted);line-height:1.6}
-.signoff .who b{display:block;font-size:.9rem;color:var(--ink);font-weight:600}
 .founder-team{display:flex;gap:16px;align-items:center;margin-top:28px;padding:14px;border-radius:12px;background:var(--soft);max-width:520px}
 .founder-team img{width:210px;aspect-ratio:3/2;object-fit:cover;object-position:center;border-radius:8px;flex:none}
 .founder-team p{font-size:.84rem;color:var(--muted)}
@@ -545,6 +545,7 @@ footer .edu .mark{height:22px}
       <div class="founder-pic">
         <span class="tag">創辦人／執行長</span>
         <img class="cut" src="photos/founder.png" alt="聯盟動物醫院創辦人暨執行長黃聰圍醫師" loading="lazy">
+        <div class="sigbar"><span class="sig" role="img" aria-label="黃聰圍醫師簽名"></span><div class="who"><b>FOUNDER &amp; CEO</b>聯盟動物醫院<br>執行長／創辦人</div></div>
       </div>
       <div class="founder-txt">
         <p class="eyebrow">創辦人</p>
@@ -552,7 +553,6 @@ footer .edu .mark{height:22px}
         <p class="lead">聯盟動物醫院所屬的寵物百分百，是一家由獸醫師創立的企業。以動物為核心，橫跨動物醫療、寵物用品、寵物美容、獸醫師教育、獸醫院資訊科技等領域，讓醫療之外的保健、飲食與生活習慣也能一起照顧到。</p>
         <div class="motto"><b>For you and them</b><span>為人與動物創造福祉，是百分百創立的宗旨。</span></div>
         <div class="values"><span>專業</span><span>熱情</span><span>紀律</span></div>
-        <div class="signoff"><span class="sig" role="img" aria-label="黃聰圍醫師簽名"></span><div class="who"><b>黃聰圍</b>Founder &amp; CEO<br>聯盟動物醫院 執行長／創辦人</div></div>
         <div class="founder-team"><img src="photos/founder-team.jpg" alt="聯盟動物醫院的醫師們" loading="lazy"><p>「守護寵物的健康」是獸醫師誓詞，也是我們每天在診間落實的事。</p></div>
       </div>
     </div>
