@@ -539,11 +539,17 @@ section{padding-block:104px}
 .hc.full{grid-column:1/-1}
 
 /* ===== MESSAGE + APPLY ===== */
-.msg{border-radius:14px;background:var(--gold-tint);padding:48px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.8fr);gap:48px;align-items:start}
+.msg{border-radius:14px;background:var(--gold-tint);padding:48px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.8fr);gap:48px;align-items:center}
 .msg .who{display:flex;gap:16px;align-items:center}
 .msg .who img{width:76px;height:76px;border-radius:50%;object-fit:cover;object-position:center 15%;background:#fff}
 .msg .who b{display:block;font-weight:600}
 .msg .who span{display:block;font-size:.8rem;color:var(--muted)}
+.msg-pic{margin:0;max-width:280px}
+.msg-pic img{width:100%;aspect-ratio:644/944;object-fit:cover;border-radius:12px;background:#E6E6EC;display:block}
+.msg-pic figcaption{margin-top:12px}
+.msg-pic b{display:block;font-weight:600;font-size:1.05rem}
+.msg-pic span{display:block;font-size:.82rem;color:var(--muted);margin-top:2px}
+@media (max-width:1000px){.msg-pic{max-width:220px}}
 .msg .body{display:grid;gap:14px;font-size:1.04rem;line-height:1.95}
 .msg .body p:first-child{font-size:1.3rem;font-weight:500}
 .apply{margin-top:20px;border-radius:14px;background:var(--dark);color:var(--on-dark);padding:48px;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:40px;align-items:center}
@@ -1142,7 +1148,7 @@ footer .edu .mark{height:22px}
     <div class="msg">
       <div>
         <p class="eyebrow" style="margin-bottom:16px">教育中心的話</p>
-        <div class="who"><img src="photos/dir-tai.jpg" alt="戴子綺醫師"><div><b>戴子綺 獸醫師</b><span>聯盟教育中心負責人<br>龜山萬壽分院院長</span></div></div>
+        <figure class="msg-pic"><img src="photos/tai-portrait.jpg" alt="聯盟教育中心負責人戴子綺獸醫師" loading="lazy"><figcaption><b>戴子綺 獸醫師</b><span>聯盟教育中心負責人・龜山萬壽分院院長</span></figcaption></figure>
       </div>
       <div class="body">
         <p>以一個過來人來說，我們不想把這裡說得完美。</p>
