@@ -916,6 +916,8 @@ footer .edu .mark{height:22px}
       <figure class="ph "><img src="photos/act-trust.jpg" alt="先和病患建立信任，再開始處置" loading="lazy" style="object-position:center 30%"><figcaption><small>照護</small><b>先和病患建立信任，再開始處置</b></figcaption></figure>
       <figure class="ph h2"><img src="photos/act-party.jpg" alt="下班後的團隊聚會" loading="lazy"><figcaption><small>團隊</small><b>下班後的團隊聚會</b></figcaption></figure>
       <figure class="ph w2"><img src="photos/act-group4.jpg" alt="和講師、同仁的交流合影" loading="lazy" style="object-position:center 35%"><figcaption><small>交流</small><b>和講師、同仁的交流合影</b></figcaption></figure>
+      <figure class="ph w2"><img src="photos/act-night-party.jpg" alt="聯盟動物醫院全體夜間戶外聚會合照" loading="lazy" style="object-position:center 60%"><figcaption><small>團隊</small><b>全院夜間戶外聚會</b></figcaption></figure>
+      <figure class="ph w2"><img src="photos/act-workshop.jpg" alt="同仁一起參加植栽手作活動" loading="lazy"><figcaption><small>福利</small><b>員工活動：植栽手作課</b></figcaption></figure>
     </div>
     <div class="posters-head"><h3>最近討論過的主題</h3><span class="eyebrow">Guideline 討論會・卓越講堂</span></div>
     <div class="posters-wrap"><div class="posters">
@@ -1049,7 +1051,12 @@ const BRANCHES = [
    pos:"以家醫科為主軸，專注第一線疾病辨識與醫療分級的關鍵判斷，適合打好臨床基礎與飼主溝通能力。週工時約 40 小時，排班可與同事協調。",
    tags:["家醫科","第一線判斷","醫療分級","飼主溝通"],
    people:[], phone:"07-7518876", jd:true,
-   jobs:[["主治獸醫師","6–14 萬＋抽成"],["大夜班主治（急診）","15 萬起＋抽成"]]}
+   jobs:[["主治獸醫師","6–14 萬＋抽成"],["大夜班主治（急診）","15 萬起＋抽成"]]},
+  {id:"usa",rz:"美國",name:"美國加州院",city:"美國加州",focus:"海外院所",
+   pos:"聯盟動物醫院在美國加州的院所，與台灣各院同屬聯盟體系。",
+   tags:["美國加州","海外據點"],
+   people:[], photo:["photos/us-hospital.jpg","美國加州院外觀"],
+   jobs:[]},
 ];
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const tabs = document.getElementById("tabs"), cards = document.getElementById("cards");
@@ -1065,7 +1072,7 @@ function render(i, push){
   tabs.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", +t.dataset.i === cur));
   const people = b.people.map(([n, d, img]) =>
     `<figure class="pcard"><img src="${img}" alt="${esc(n)}" loading="lazy"><figcaption class="who"><b>${esc(n)}</b><span>${esc(d)}</span></figcaption></figure>`).join("")
-    || `<div class="pcard empty"><span>${b.note ? esc(b.note) : "院長資料整理中<br>歡迎填表單詢問"}</span></div>`;
+    || (b.photo ? `<figure class="pcard"><img src="${b.photo[0]}" alt="${esc(b.photo[1])}" loading="lazy" style="object-position:center"><figcaption class="who"><b>${esc(b.photo[1])}</b><span>ALLIANCE VETERINARY HOSPITAL</span></figcaption></figure>` : `<div class="pcard empty"><span>${b.note ? esc(b.note) : "院長資料整理中<br>歡迎填表單詢問"}</span></div>`);
   const jobs = b.jobs.length
     ? b.jobs.map(([t, s]) => `<div class="job"><span>${esc(t)}</span><small>${esc(s)}</small></div>`).join("")
     : `<div class="job none">目前沒有公告職缺，歡迎詢問</div>`;
