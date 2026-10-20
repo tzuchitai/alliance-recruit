@@ -149,6 +149,13 @@ section{padding-block:104px}
 .tab .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
 .tab-hint{display:flex;align-items:center;gap:6px;margin-top:10px;font-size:.76rem;color:var(--muted)}
 .tab-hint .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.overview{margin-top:40px;border-top:1px solid var(--line)}
+.overview h3{font-size:1.05rem;font-weight:600;margin:22px 0 6px}
+.ov-row{display:grid;grid-template-columns:150px 170px minmax(0,1fr);gap:16px;padding:14px 0;border-bottom:1px solid var(--line);font-size:.88rem;align-items:baseline;cursor:pointer;background:none;border-left:0;border-right:0;border-top:0;width:100%;text-align:left;color:inherit;font-family:inherit}
+.ov-row:hover b{color:var(--gold-ink)}
+.ov-row b{font-weight:600}
+.ov-row span.f{color:var(--gold-ink);font-weight:600;font-size:.8rem}
+.ov-row span.p{color:var(--muted)}
 .region-sep{font-size:.7rem;letter-spacing:.14em;color:var(--muted);padding:0 2px 0 8px}
 .region-sep:first-child{padding-left:0}
 .card-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:22px}
@@ -380,6 +387,7 @@ footer .edu .mark{height:22px}
 }
 @media (max-width:640px){
   section{padding-block:72px}
+  .ov-row{grid-template-columns:minmax(0,1fr);gap:2px}
   .seed,.meet{padding:22px}
   .seed dl{grid-template-columns:minmax(0,1fr)}
   .seed dt{padding-bottom:0;border-top:1px solid rgba(142,98,8,.18)}
@@ -503,6 +511,7 @@ footer .edu .mark{height:22px}
       <div class="tabs" id="tabs" role="tablist" aria-label="分院"></div>
       <p class="tab-hint"><span class="dot" aria-hidden="true"></span>金點表示有公告中的職缺</p>
       <div class="card-row" id="cards" role="tabpanel" aria-live="polite"></div>
+      <div class="overview"><h3>各分院定位一覽</h3><div id="ov"></div></div>
     </div>
   </div>
 </section>
@@ -815,8 +824,8 @@ const BRANCHES = [
    pos:"以心臟科為主軸，兼具內科、外科與牙科服務，累積大量心臟追蹤病例，也能發展完整內外科思維。",
    tags:["心臟專科","心臟追蹤病例","牙科","北區區域加給"],
    people:[["戴子綺 院長","教育中心負責人｜台大 DVM、MVM｜CCRP｜前台大心血管科主治","photos/dir-tai.jpg"]],jobs:[]},
-  {id:"tainan",rz:"台南",name:"台南民生分院",city:"台南",focus:null,
-   pos:null,
+  {id:"tainan",rz:"台南",name:"台南民生分院",city:"台南",focus:"內外科 × 牙科 × 中獸醫",
+   pos:"以一般犬貓內外科為主，並發展牙科與中獸醫，適合想在穩固的內外科基礎上，培養牙科處置與整合醫療能力的醫師。",
    tags:["內外科","軟組織外科","牙科","中獸醫"],
    people:[["謝珮瑜 院長","美國氣學會中獸醫針灸師｜Fear Free｜軟組織外科、牙科、中獸醫","photos/hero-hsieh.jpg"]],jobs:[]},
   {id:"renwu",rz:"高雄",name:"仁武總院",city:"高雄市仁武區",focus:"高雄醫療後盾",
@@ -879,6 +888,10 @@ tabs.addEventListener("click", e => { const t = e.target.closest(".tab"); if (t)
 document.getElementById("prev").addEventListener("click", () => render(cur - 1, true));
 document.getElementById("next").addEventListener("click", () => render(cur + 1, true));
 
+
+document.getElementById("ov").innerHTML = BRANCHES.map((b, i) =>
+  `<button type="button" class="ov-row" data-i="${i}"><b>${esc(b.name)}</b><span class="f">${b.focus ? esc(b.focus) : ""}</span><span class="p">${b.pos ? esc(b.pos) : "分院定位說明整理中"}</span></button>`).join("");
+document.getElementById("ov").addEventListener("click", e => { const r = e.target.closest(".ov-row"); if (!r) return; render(+r.dataset.i, true); document.getElementById("cards").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center"}); });
 const h = location.hash.slice(1), hi = BRANCHES.findIndex(b => b.id === h);
 render(hi >= 0 ? hi : cur, false);
 if (hi >= 0) document.getElementById("branches").scrollIntoView();
