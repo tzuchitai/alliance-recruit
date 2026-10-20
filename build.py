@@ -15,6 +15,7 @@ def b64(name):
 
 
 body = src.replace("__ALLIANCE__", b64("alliance-logo.png")).replace("__EDU__", b64("edu-mark.png"))
+body = body.replace("__WORLD__", (root / "assets" / "world-110m.json").read_text(encoding="utf-8")).replace("__TW__", (root / "assets" / "taiwan-50m.json").read_text(encoding="utf-8"))
 
 # src.html starts with charset/viewport metas; keep them only in the full document.
 fragment = "\n".join(l for l in body.split("\n") if not l.startswith(('<meta charset', '<meta name="viewport"')))

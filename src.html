@@ -159,6 +159,43 @@ section{padding-block:104px}
 .float span{font-size:.74rem;color:#5A5F66;line-height:1.5;display:block}
 .float .go{flex:none;width:28px;height:28px;border-radius:50%;background:#1F2328;color:#fff;display:grid;place-items:center;font-size:.8rem;text-decoration:none}
 
+/* ===== NETWORK MAP ===== */
+:root{--map-land:#E7E1D6;--map-stroke:#FFFFFF;--map-on:#EBB649;--map-ink:#1F2328}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--map-land:#2B2E33;--map-stroke:#1C1E21;--map-ink:#ECEDEE}}
+:root[data-theme="dark"]{--map-land:#2B2E33;--map-stroke:#1C1E21;--map-ink:#ECEDEE}
+.netmap{margin-top:40px;border-radius:16px;border:1px solid var(--line);background:var(--bg);overflow:hidden}
+.nm-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;padding:28px 32px 0}
+.nm-head .k{font-size:.74rem;letter-spacing:.22em;font-weight:600;color:var(--gold-ink)}
+.nm-head h3{font-weight:700;font-size:clamp(1.9rem,4.4vw,3.2rem);line-height:1.02;letter-spacing:-.01em;margin-top:6px;font-family:"Plus Jakarta Sans",var(--sans)}
+.nm-head h3 span{display:block;font-size:.42em;font-weight:500;letter-spacing:0;color:var(--muted);margin-top:8px;font-family:var(--sans)}
+.nm-stats{display:flex;gap:28px}
+.nm-stats div{text-align:right}
+.nm-stats b{display:block;font-weight:300;font-size:clamp(2.2rem,4vw,3rem);line-height:1;letter-spacing:-.03em}
+.nm-stats small{font-size:.78rem;color:var(--muted)}
+.nm-body{position:relative;padding:8px 12px 12px}
+.nm-world{width:100%;height:auto;display:block}
+.nm-world .land{fill:var(--map-land);stroke:var(--map-stroke);stroke-width:.5}
+.nm-world .land.on{fill:var(--map-on)}
+.nm-world .arc{fill:none;stroke:var(--map-ink);stroke-width:1.4;stroke-dasharray:4 5;opacity:.55}
+.nm-world .pin circle.dot{fill:var(--map-ink);stroke:#fff;stroke-width:2}
+.nm-world .pin circle.ring{fill:none;stroke:var(--map-on);stroke-width:2;opacity:.9}
+.nm-world .pin text{font-size:14px;font-weight:700;fill:var(--map-ink);paint-order:stroke;stroke:var(--bg);stroke-width:4px;stroke-linejoin:round}
+.nm-world .pin text.sub{font-size:11px;font-weight:500;fill:var(--muted)}
+@media (prefers-reduced-motion:no-preference){.nm-world .pin circle.ring{animation:pulse 2.4s ease-out infinite;transform-box:fill-box;transform-origin:center}}
+@keyframes pulse{0%{transform:scale(.6);opacity:.95}100%{transform:scale(2.6);opacity:0}}
+.nm-inset{position:absolute;right:22px;bottom:22px;width:min(300px,34%);border-radius:12px;background:var(--bg);border:1px solid var(--line);box-shadow:0 16px 40px -20px rgba(0,0,0,.35);padding:12px 14px 14px}
+.nm-inset .t{display:flex;justify-content:space-between;align-items:baseline;font-size:.78rem;font-weight:600}
+.nm-inset .t span{color:var(--gold-ink)}
+.nm-tw{width:100%;height:auto;display:block;margin-top:6px}
+.nm-tw .isl{fill:var(--map-on);opacity:.9}
+.nm-tw circle{fill:var(--map-ink);stroke:var(--bg);stroke-width:1.5}
+.nm-tw text{font-size:12px;font-weight:600;fill:var(--map-ink)}
+.nm-tw text small,.nm-tw .n{font-size:10.5px;font-weight:500;fill:var(--muted)}
+.nm-tw .lead{color:var(--muted);stroke-width:.8}
+.nm-legend{display:flex;gap:18px;flex-wrap:wrap;padding:0 32px 24px;font-size:.78rem;color:var(--muted)}
+.nm-legend i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+@media (max-width:760px){.nm-inset{position:static;width:auto;max-width:340px;margin:6px auto 0}.nm-stats{gap:18px}.nm-head{padding:22px 20px 0}.nm-legend{padding:0 20px 20px}}
+
 /* ===== INTRO STAT ===== */
 .intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;padding-bottom:56px;border-bottom:1px solid var(--line)}
 .bignum{display:flex;flex-direction:column;justify-content:center;align-items:center;gap:18px;min-height:220px;padding:10px 24px;border-right:1px solid var(--line)}
@@ -589,7 +626,7 @@ footer .edu .mark{height:22px}
       <div class="word" aria-hidden="true">ALLIANCE</div>
       <div class="hero-copy">
         <h1>2026 獸醫師招募<br>醫療不孤單，病例有人一起討論。</h1>
-        <p>9 間院所，每一間的專科方向都不同。各院定位、院長專長、薪資與培育制度都整理在這裡。</p>
+        <p>台灣 9 間、美國 1 間，每一間的專科方向都不同。各院定位、院長專長、薪資與培育制度都整理在這裡。</p>
         <a class="btn" href="#jobs">看公告職缺</a>
       </div>
       <div class="float">
@@ -612,8 +649,8 @@ footer .edu .mark{height:22px}
   <div class="wrap">
     <div class="intro">
       <div class="bignum">
-        <div class="num"><b>9</b><span class="unit">間院所</span></div>
-        <div class="pills"><span class="pill">2016 創立・十週年</span><span class="pill">台灣 8 間・美國 1 間</span></div>
+        <div class="num"><b>10</b><span class="unit">間院所</span></div>
+        <div class="pills"><span class="pill">2016 創立・十週年</span><span class="pill">台灣 9 間・美國加州 1 間</span></div>
       </div>
       <div class="statement">
         <h2><span class="nb">以專科發展為方向的</span><span class="nb">連鎖醫療體系，</span><br><span class="nb">醫師身後有一整個團隊。</span></h2>
@@ -621,6 +658,20 @@ footer .edu .mark{height:22px}
         <a class="btn" href="#career">看職涯發展</a>
       </div>
     </div>
+    <figure class="netmap" id="network" style="margin-inline:0">
+      <div class="nm-head">
+        <div><span class="k">ALLIANCE NETWORK</span><h3>From Taiwan to California<span>從台灣到美國加州，同一套醫療標準</span></h3></div>
+        <div class="nm-stats"><div><b>9</b><small>台灣院所</small></div><div><b>1</b><small>美國加州</small></div><div><b>10</b><small>院所總數</small></div></div>
+      </div>
+      <div class="nm-body">
+        <svg class="nm-world" id="nm-world" viewBox="0 0 960 470" role="img" aria-label="世界地圖，標示聯盟動物醫院在台灣與美國加州的院所"></svg>
+        <div class="nm-inset">
+          <div class="t">台灣院所分布<span>9 間</span></div>
+          <svg class="nm-tw" id="nm-tw" viewBox="0 0 280 300" role="img" aria-label="台灣地圖：北部 3 間、台南 1 間、高雄 5 間"></svg>
+        </div>
+      </div>
+      <figcaption class="nm-legend"><span><i style="background:var(--map-on)"></i>聯盟院所所在國家</span><span><i style="background:var(--map-ink);border-radius:50%"></i>院所據點</span></figcaption>
+    </figure>
     <div class="duo">
       <div class="tile stats">
         <div class="hiring"><b>徵</b><span>NOW HIRING</span><em>高雄・台北</em></div>
@@ -663,7 +714,7 @@ footer .edu .mark{height:22px}
     <div class="brands">
       <div class="br"><div class="logo"><span class="mark edu" style="--c:#7A4A2E" aria-hidden="true"></span><b>百分百寵物生活館</b></div><p>獸醫師開的寵物店。精選驅蟲藥品、處方飼料、營養品、寵物美容與用品，門市店員為受過半年衛教與商品訓練的寵物諮詢師。</p></div>
       <div class="br"><div class="logo"><span class="mark edu" style="--c:#8C9A7E" aria-hidden="true"></span><b>獸研所</b></div><p>台灣獸醫師團隊成立的寵物品牌，研發測試長達一年以上，開發出可以每天食用的腎臟保養主食罐，主打醫學保養。</p></div>
-      <div class="br here"><div class="logo"><span class="mark edu" style="--c:#D9A23A" aria-hidden="true"></span><b>聯盟動物醫院</b></div><p>致力於發展專科的連鎖醫療體系，總院為少數擁有 24H 夜間急診的動物醫院，目前全台已有 9 間院所。</p><span class="you">你應徵的就是這裡</span></div>
+      <div class="br here"><div class="logo"><span class="mark edu" style="--c:#D9A23A" aria-hidden="true"></span><b>聯盟動物醫院</b></div><p>致力於發展專科的連鎖醫療體系，總院為少數擁有 24H 夜間急診的動物醫院，目前全台已有 9 間院所，美國加州另有 1 間。</p><span class="you">你應徵的就是這裡</span></div>
       <div class="br"><div class="logo"><span class="mark edu" style="--c:#8A2A33" aria-hidden="true"></span><b>百分百獸醫考網</b></div><p>全台第一的獸醫師考補習班，提供教材與課程，培育獸醫師人才，強化獸醫體系的教育中心。</p></div>
       <div class="br"><div class="logo"><span class="mark edu" style="--c:#7E8FB0" aria-hidden="true"></span><b>專業獸醫聯盟</b></div><p>臺灣碩騰藥品經銷代理，結合獸醫師共同採購的線上平台。小型獸醫院也能以較低成本採購，協助推動數位轉型與資訊共享。</p></div>
     </div>
@@ -1022,6 +1073,8 @@ footer .edu .mark{height:22px}
 </aside>
 <footer><div class="wrap"><span class="edu"><span class="mark edu" aria-hidden="true"></span>EDUCATION CENTER</span><span>聯盟動物醫院 · 寵物百分百股份有限公司 · 聯盟教育中心　照片：聯盟動物醫院官網</span></div></footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
 <script>
 const FORM = "https://forms.gle/SVXiBVjkQ3kXTBmr6";
 // 由北到南。people: [姓名職稱, 簡介, 照片]；jobs 空陣列＝目前沒有公告職缺。
@@ -1114,6 +1167,46 @@ document.getElementById("ov").innerHTML = BRANCHES.map((b, i) =>
 document.getElementById("ov").addEventListener("click", e => { const r = e.target.closest(".ov-row"); if (!r) return; render(+r.dataset.i, true); document.getElementById("cards").scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "center"}); });
 const h = location.hash.slice(1), hi = BRANCHES.findIndex(b => b.id === h);
 render(hi >= 0 ? hi : cur, false);
+
+// 國際版圖地圖
+(() => {
+  if (!window.d3 || !window.topojson) return;
+  const WORLD = __WORLD__, TW = __TW__;
+  const svg = d3.select("#nm-world"), W = 960, H = 470;
+  const proj = d3.geoEqualEarth().rotate([-170, 0]).fitExtent([[10, 10], [W - 10, H - 10]], {type: "Sphere"});
+  const path = d3.geoPath(proj);
+  const countries = topojson.feature(WORLD, WORLD.objects.countries).features;
+  const on = new Set(["158", "840"]);
+  svg.append("g").selectAll("path").data(countries).join("path").attr("class", d => "land" + (on.has(d.id) ? " on" : "")).attr("d", path);
+  const tw = [120.9, 23.7], ca = [-118.5, 34.4];
+  svg.append("path").attr("class", "arc").attr("d", path({type: "LineString", coordinates: [tw, ca]}));
+  const pin = (ll, t1, t2, dx, anchor) => {
+    const [x, y] = proj(ll), g = svg.append("g").attr("class", "pin").attr("transform", `translate(${x},${y})`);
+    g.append("circle").attr("class", "ring").attr("r", 9);
+    g.append("circle").attr("class", "dot").attr("r", 5.5);
+    g.append("text").attr("x", dx).attr("y", -4).attr("text-anchor", anchor).text(t1);
+    g.append("text").attr("class", "sub").attr("x", dx).attr("y", 12).attr("text-anchor", anchor).text(t2);
+  };
+  pin(tw, "台灣", "9 間院所", -14, "end");
+  pin(ca, "美國加州", "1 間院所", 14, "start");
+  // 台灣分布：島在左、標籤全部放右側
+  const t = d3.select("#nm-tw"), tp = d3.geoMercator().fitExtent([[14, 14], [118, 286]], TW), tpath = d3.geoPath(tp);
+  t.append("path").attr("class", "isl").attr("d", tpath(TW));
+  const groups = [
+    {name: "北部", n: "3 間", lines: ["台北籌備・林口・龜山"], ll: [121.42, 25.05], ty: 40},
+    {name: "台南", n: "1 間", lines: ["民生分院"], ll: [120.21, 23.0], ty: 168},
+    {name: "高雄", n: "5 間", lines: ["仁武・岡燕・旗楠", "鳳屏・建國"], ll: [120.33, 22.68], ty: 226}];
+  const LX = 146;
+  groups.forEach(gp => {
+    const [x, y] = tp(gp.ll);
+    t.append("polyline").attr("points", `${x},${y} ${LX - 14},${gp.ty - 4} ${LX - 4},${gp.ty - 4}`).attr("fill", "none").attr("stroke", "currentColor").attr("class", "lead");
+    t.append("circle").attr("cx", x).attr("cy", y).attr("r", gp.name === "高雄" ? 7 : 5);
+    const tx = t.append("text").attr("x", LX).attr("y", gp.ty);
+    tx.append("tspan").text(gp.name + " ");
+    tx.append("tspan").attr("class", "n").text(gp.n);
+    gp.lines.forEach((l, k) => t.append("text").attr("class", "n").attr("x", LX).attr("y", gp.ty + 15 + k * 13).text(l));
+  });
+})();
 
 // 主視覺輪播
 (() => {
