@@ -244,6 +244,27 @@ section{padding-block:104px}
 .li h3 small{font-weight:400;color:var(--muted);font-size:.78rem;margin-left:8px}
 .li p{font-size:.86rem;color:var(--muted);margin-top:6px}
 
+/* ===== EYE (seed + meeting) ===== */
+.eye{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:18px;margin-top:44px}
+.seed{border-radius:14px;background:var(--gold-tint);padding:30px;min-width:0}
+.seed .top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.seed h3{font-size:1.4rem;font-weight:500}
+.seed .top span{font-size:.76rem;font-weight:600;color:var(--gold-ink)}
+.seed dl{margin:18px 0 0;display:grid;grid-template-columns:auto minmax(0,1fr);gap:0}
+.seed dt,.seed dd{margin:0;padding:12px 0;border-top:1px solid rgba(142,98,8,.18);font-size:.88rem}
+.seed dt{font-weight:600;padding-right:22px;white-space:nowrap;color:var(--gold-ink)}
+.seed dd{color:var(--ink)}
+.meet{border-radius:14px;background:#1F2328;color:#F2F2F3;padding:30px;display:flex;flex-direction:column;gap:16px;min-width:0}
+.meet .tag{font-size:.72rem;letter-spacing:.12em;color:#EBB649}
+.meet h3{font-size:1.4rem;font-weight:500}
+.meet .freq{display:flex;align-items:baseline;gap:8px}
+.meet .freq b{font-weight:200;font-size:3.4rem;line-height:1;letter-spacing:-.03em}
+.meet .freq span{font-size:.9rem;font-weight:500}
+.meet p{font-size:.88rem;color:#B9BEC4}
+.meet figure{margin:auto 0 0;border-radius:10px;overflow:hidden;background:#fff}
+.meet figure img{width:100%;display:block}
+.meet figcaption{font-size:.72rem;color:#6A6F76;padding:8px 12px;background:#fff}
+
 /* ===== ADVISORS ===== */
 .adv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .advc{display:grid;grid-template-columns:180px minmax(0,1fr);gap:24px;border-radius:14px;border:1px solid var(--line);padding:22px;background:var(--bg);min-width:0}
@@ -330,6 +351,7 @@ footer .edu .mark{height:22px}
 @keyframes fade{from{opacity:.35}}
 
 @media (max-width:1000px){
+  .eye{grid-template-columns:minmax(0,1fr)}
   .adv{grid-template-columns:minmax(0,1fr)}
   .founder{grid-template-columns:minmax(0,1fr);gap:28px}
   .founder-pic{max-width:420px}
@@ -352,6 +374,10 @@ footer .edu .mark{height:22px}
 }
 @media (max-width:640px){
   section{padding-block:72px}
+  .seed,.meet{padding:22px}
+  .seed dl{grid-template-columns:minmax(0,1fr)}
+  .seed dt{padding-bottom:0;border-top:1px solid rgba(142,98,8,.18)}
+  .seed dd{border-top:0;padding-top:4px}
   .advc{grid-template-columns:110px minmax(0,1fr);gap:16px;padding:16px}
   .founder-team{flex-direction:column;align-items:flex-start}
   .founder-team img{width:100%}
@@ -578,9 +604,30 @@ footer .edu .mark{height:22px}
         <div class="li"><h3>臨床難題討論會<small>M&amp;M</small></h3><p>分享困難與遺憾的病例。不追究責任，一起找到下次更好的做法。</p></div>
         <div class="li"><h3>卓越講堂</h3><p>每月主題課程，邀請各專科臨床醫師分享，可以直接拿自己的病例提問。</p></div>
         <div class="li"><h3>學長姐貼身教學</h3><p>跟診、旁診觀摩與回饋。總院另有外聘顧問課程、模擬門診與筆試考核。</p></div>
-        <div class="li"><h3>專科種子醫師計畫</h3><p>主治考核通過兩年後可申請，為期兩到三年，第二年開始獨立接專科門診。</p></div>
+        <div class="li"><h3>專科種子醫師計畫</h3><p>例如下方的眼科種子醫師計畫。主治考核通過兩年後可申請，為期兩到三年，第二年開始獨立接專科門診。</p></div>
         <div class="li"><h3>導生關懷制度</h3><p>從適應工作、累積病例到找專科方向，每個階段都有導師陪你一起想。</p></div>
       </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div class="eye" id="eye">
+      <article class="seed">
+        <div class="top"><h3>眼科種子醫師計畫</h3><span>專科種子醫師計畫</span></div>
+        <dl>
+          <dt>計畫目的</dt><dd>培育聯盟體系內的專科種子醫師，強化臨床專業與未來教學能量</dd>
+          <dt>對象資格</dt><dd>體系內具潛力與發展意願的主治醫師，經主管推薦與教育中心審核選出</dd>
+          <dt>培訓內容</dt><dd>專科輪診學習、病例書寫、定期討論與顧問醫師指導，逐步建立專業思路與邏輯</dd>
+          <dt>計畫期程</dt><dd>約兩到三年。第一年以學習與紀錄為主，第二年可開始獨立接專科門診</dd>
+          <dt>預期成果</dt><dd>醫師專業成長、體系專科能量提升，可望成為未來的教學講師與區域領頭角色</dd>
+        </dl>
+      </article>
+      <article class="meet">
+        <span class="tag">ONLINE・OPHTHALMOLOGY</span>
+        <h3>線上眼科討論會</h3>
+        <div class="freq"><b>2</b><span>週一次</span></div>
+        <p>各院醫師輪流整理眼科主題，線上一起討論。不在同一間分院，也能固定參與。</p>
+        <figure><img src="photos/eye-meeting.jpg" alt="線上眼科討論會簡報：視網膜電圖 ERG 波形判讀" loading="lazy"><figcaption>討論會實際簡報：ERG 視網膜電圖波形判讀</figcaption></figure>
+      </article>
     </div>
   </div>
 </section>
