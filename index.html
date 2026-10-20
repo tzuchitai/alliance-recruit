@@ -61,6 +61,15 @@ section{padding-block:104px}
 .hero{padding-block:16px 0}
 .panel{position:relative;border-radius:14px;overflow:hidden;background:linear-gradient(160deg,var(--hero-a) 0%,#F3EBDD 55%,var(--hero-b) 100%);min-height:620px;color:#1F2328;isolation:isolate}
 .panel .photo{position:absolute;right:4%;bottom:0;height:96%;width:auto;aspect-ratio:1;max-width:none;mix-blend-mode:multiply;object-fit:cover;object-position:center top;z-index:1}
+.slides{position:absolute;inset:0;z-index:1}
+.slide{position:absolute;inset:0;opacity:0;transition:opacity 1s ease;pointer-events:none}
+.slide.on{opacity:1}
+.slide.cover img{position:absolute;right:0;top:0;height:100%;width:64%;object-fit:cover;object-position:center 30%;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 38%);mask-image:linear-gradient(90deg,transparent 0,#000 38%)}
+.slide .cap{position:absolute;right:30px;bottom:30px;font-size:.74rem;color:#fff;background:rgba(31,35,40,.62);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);padding:5px 12px;border-radius:999px;z-index:2}
+.dots{position:absolute;z-index:4;right:30px;top:50%;transform:translateY(-50%);display:grid;gap:8px}
+.dots button{width:8px;height:8px;padding:0;border-radius:999px;border:0;background:rgba(31,35,40,.28);cursor:pointer;transition:height .3s,background .3s}
+.dots button[aria-current="true"]{height:26px;background:#1F2328}
+.dots button:focus-visible{outline:2px solid #1F2328;outline-offset:3px}
 .panel .nav{position:relative;z-index:3;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 30px;flex-wrap:wrap}
 .panel .nav .lock{display:flex;align-items:center;gap:16px}
 .panel .nav .sep{width:1px;height:24px;background:rgba(31,35,40,.2)}
@@ -106,6 +115,25 @@ section{padding-block:104px}
 .opening b{display:block;font-weight:500;font-size:clamp(1.3rem,2.2vw,1.7rem);line-height:1.3;margin-top:2px}
 .opening span{display:block;font-size:.84rem;color:var(--gold-ink);font-weight:600;margin-top:4px}
 .opening b::after{content:" →";font-weight:300;color:var(--muted)}
+
+/* ===== FOUNDER ===== */
+.founder{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:56px;align-items:center;margin-top:72px}
+.founder-pic{position:relative;border-radius:14px;background:linear-gradient(170deg,#F3EBDD,#E2D2B4);aspect-ratio:4/4.4;overflow:hidden;min-width:0}
+.founder-pic img.cut{position:absolute;left:50%;bottom:0;height:94%;width:auto;max-width:none;transform:translateX(-50%);mix-blend-mode:multiply}
+.founder-pic .tag{position:absolute;left:16px;top:16px;font-size:.72rem;font-weight:600;letter-spacing:.08em;background:#fff;color:#1F2328;padding:5px 12px;border-radius:999px}
+.founder-txt{min-width:0}
+.founder-txt .name{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;margin-top:8px}
+.founder-txt .name b{font-size:clamp(2rem,4vw,2.8rem);font-weight:500;letter-spacing:.02em}
+.founder-txt .name span{font-size:.9rem;color:var(--muted)}
+.founder-txt .lead{margin-top:18px;font-size:1rem;max-width:34em}
+.motto{margin-top:26px;border-left:3px solid var(--gold);padding:4px 0 4px 18px}
+.motto b{display:block;font-size:1.25rem;font-weight:500}
+.motto span{display:block;font-size:.88rem;color:var(--muted);margin-top:4px}
+.values{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.values span{font-size:.82rem;font-weight:600;padding:6px 14px;border-radius:999px;background:var(--gold-tint);color:var(--gold-ink)}
+.founder-team{display:flex;gap:16px;align-items:center;margin-top:28px;padding:14px;border-radius:12px;background:var(--soft);max-width:520px}
+.founder-team img{width:150px;aspect-ratio:340/279;object-fit:cover;border-radius:8px;flex:none}
+.founder-team p{font-size:.84rem;color:var(--muted)}
 
 /* ===== BRANCHES ===== */
 .dept{background:var(--soft);margin-top:104px}
@@ -294,6 +322,8 @@ footer .edu .mark{height:22px}
 @keyframes fade{from{opacity:.35}}
 
 @media (max-width:1000px){
+  .founder{grid-template-columns:minmax(0,1fr);gap:28px}
+  .founder-pic{max-width:420px}
   .jd-grid{grid-template-columns:minmax(0,1fr)}
   .cake{grid-template-columns:repeat(2,minmax(0,1fr))}
   .side-note{display:none}
@@ -313,6 +343,8 @@ footer .edu .mark{height:22px}
 }
 @media (max-width:640px){
   section{padding-block:72px}
+  .founder-team{flex-direction:column;align-items:flex-start}
+  .founder-team img{width:100%}
   .jd{padding:22px}
   .jd .two,.facts,.grades,.cake{grid-template-columns:minmax(0,1fr)}
   .done-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:170px;gap:10px}
@@ -321,6 +353,10 @@ footer .edu .mark{height:22px}
   .dept{margin-top:72px}
   .panel{min-height:660px}
   .panel .photo{right:-22%;height:52%}
+  .slide.cover img{width:100%;height:50%;top:auto;bottom:0;-webkit-mask-image:linear-gradient(180deg,transparent 0,#000 35%);mask-image:linear-gradient(180deg,transparent 0,#000 35%)}
+  .slide .cap{display:none}
+  .dots{top:auto;bottom:auto;right:18px;top:78px;transform:none;grid-auto-flow:column}
+  .dots button[aria-current="true"]{height:8px;width:24px}
   .panel .nav{padding:16px 18px}
   .panel .nav .sep,.panel .nav .edu{display:none}
   .word{padding:20px 18px 0}
@@ -345,7 +381,13 @@ footer .edu .mark{height:22px}
 <header class="hero">
   <div class="wrap">
     <div class="panel">
-      <img class="photo" src="photos/hero-hsieh.jpg" alt="聯盟動物醫院謝珮瑜院長與德國牧羊犬">
+      <div class="slides" id="slides">
+        <div class="slide on"><img class="photo" src="photos/hero-hsieh.jpg" alt="謝珮瑜院長與德國牧羊犬"></div>
+        <div class="slide cover"><img src="photos/hero-team.jpg" alt="聯盟動物醫院醫師團隊與 CT 斷層掃描儀"><span class="cap">醫師團隊與 CT 斷層掃描</span></div>
+        <div class="slide cover"><img src="photos/hero-care.jpg" alt="醫師與助理一起為狗狗做檢查" loading="lazy"><span class="cap">門診中的醫師與助理</span></div>
+        <div class="slide cover"><img src="photos/hero-lecture.jpg" alt="院內課程：如何向飼主說明醫療選項" loading="lazy"><span class="cap">院內課程：如何向飼主說明醫療選項</span></div>
+      </div>
+      <div class="dots" id="dots" aria-label="切換主視覺照片"></div>
       <div class="nav">
         <div class="lock">
           <span class="mark alliance" role="img" aria-label="聯盟動物醫院 Alliance Veterinary Hospital"></span>
@@ -355,10 +397,6 @@ footer .edu .mark{height:22px}
         <a class="nv" href="https://forms.gle/SVXiBVjkQ3kXTBmr6" target="_blank" rel="noopener">應徵表單</a>
       </div>
       <div class="word" aria-hidden="true">ALLIANCE</div>
-      <div class="side-note">
-        <p>聯盟動物醫院是致力發展專科的連鎖醫療體系。2026 年迎來十週年，我們在找願意一起討論、一起把醫療做好的夥伴。</p>
-        <a href="#branches">認識各分院 →</a>
-      </div>
       <div class="hero-copy">
         <h1>2026 獸醫師招募<br>醫療不孤單，病例有人一起討論。</h1>
         <p>9 間院所，每一間的專科方向都不同。各院定位、院長專長、薪資與培育制度都整理在這裡。</p>
@@ -393,6 +431,20 @@ footer .edu .mark{height:22px}
         <div class="hiring"><b>徵</b><span>NOW HIRING</span><em>建國分院</em></div>
         <a class="opening" href="#jobs"><small>全職・排班制</small><b>主治獸醫師</b><span>6–14 萬＋抽成・臨床 2 年以上</span></a>
         <a class="opening" href="#jobs"><small>固定大夜班 21:30–09:30</small><b>大夜班主治獸醫師</b><span>15 萬起＋抽成・夜間急診</span></a>
+      </div>
+    </div>
+    <div class="founder" id="founder">
+      <div class="founder-pic">
+        <span class="tag">創辦人／執行長</span>
+        <img class="cut" src="photos/founder.png" alt="聯盟動物醫院創辦人暨執行長黃聰圍醫師" loading="lazy">
+      </div>
+      <div class="founder-txt">
+        <p class="eyebrow">創辦人</p>
+        <div class="name"><b>黃聰圍 醫師</b><span>聯盟動物醫院 執行長／創辦人</span></div>
+        <p class="lead">聯盟動物醫院所屬的寵物百分百，是一家由獸醫師創立的企業。以動物為核心，橫跨動物醫療、寵物用品、寵物美容、獸醫師教育、獸醫院資訊科技等領域，讓醫療之外的保健、飲食與生活習慣也能一起照顧到。</p>
+        <div class="motto"><b>For you and them</b><span>為人與動物創造福祉，是百分百創立的宗旨。</span></div>
+        <div class="values"><span>專業</span><span>熱情</span><span>紀律</span></div>
+        <div class="founder-team"><img src="photos/founder-team.jpg" alt="聯盟動物醫院的醫師們" loading="lazy"><p>「守護寵物的健康」是獸醫師誓詞，也是我們每天在診間落實的事。</p></div>
       </div>
     </div>
   </div>
@@ -708,6 +760,22 @@ document.getElementById("next").addEventListener("click", () => render(cur + 1, 
 const h = location.hash.slice(1), hi = BRANCHES.findIndex(b => b.id === h);
 render(hi >= 0 ? hi : cur, false);
 if (hi >= 0) document.getElementById("branches").scrollIntoView();
+
+// 主視覺輪播
+(() => {
+  const slides = [...document.querySelectorAll("#slides .slide")], dots = document.getElementById("dots");
+  let i = 0, timer = null;
+  dots.innerHTML = slides.map((_, k) => `<button type="button" aria-label="第 ${k + 1} 張照片"${k ? "" : ' aria-current="true"'}></button>`).join("");
+  const btns = [...dots.children];
+  const show = k => { i = (k + slides.length) % slides.length; slides.forEach((s, n) => s.classList.toggle("on", n === i)); btns.forEach((b, n) => n === i ? b.setAttribute("aria-current", "true") : b.removeAttribute("aria-current")); };
+  btns.forEach((b, k) => b.addEventListener("click", () => { show(k); restart(); }));
+  const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const restart = () => { clearInterval(timer); if (!reduce) timer = setInterval(() => show(i + 1), 6000); };
+  const panel = document.querySelector(".panel");
+  panel.addEventListener("mouseenter", () => clearInterval(timer));
+  panel.addEventListener("mouseleave", restart);
+  restart();
+})();
 
 document.getElementById("copy-mail").addEventListener("click", function(){
   const btn = this;
