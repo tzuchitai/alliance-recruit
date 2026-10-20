@@ -302,6 +302,13 @@ section{padding-block:104px}
 .jd .two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .jd .apply-row{margin-top:auto;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
 .jd.night .btn{background:#EBB649;color:#1F2328}
+.more-jobs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}
+.mj{display:flex;justify-content:space-between;align-items:center;gap:16px;border-radius:14px;border:1px solid var(--line);background:var(--gold-tint);padding:22px 26px;text-decoration:none;color:var(--ink);min-width:0}
+.mj small{display:block;font-size:.76rem;color:var(--muted)}
+.mj b{display:block;font-size:1.2rem;font-weight:600;margin-top:2px}
+.mj span.d{display:block;font-size:.84rem;color:var(--gold-ink);font-weight:600;margin-top:4px}
+.mj .go{flex:none;font-size:.84rem;font-weight:600;border-bottom:1.5px solid var(--gold)}
+.mj:hover{border-color:var(--gold)}
 .grades{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
 .grade{border-radius:10px;background:var(--soft);padding:20px;min-width:0}
 .grade .g{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
@@ -515,6 +522,8 @@ footer .edu .mark{height:22px}
 }
 @media (max-width:640px){
   section{padding-block:72px}
+  .more-jobs{grid-template-columns:minmax(0,1fr)}
+  .mj{flex-direction:column;align-items:flex-start}
   .gp,.brands{grid-template-columns:minmax(0,1fr)}
   .br:nth-child(2n){border-left:0}
   .group{padding-top:72px}
@@ -614,7 +623,7 @@ footer .edu .mark{height:22px}
     </div>
     <div class="duo">
       <div class="tile stats">
-        <div class="hiring"><b>徵</b><span>NOW HIRING</span><em>建國・台北</em></div>
+        <div class="hiring"><b>徵</b><span>NOW HIRING</span><em>高雄・台北</em></div>
         <a class="opening" href="#jobs"><small>全職・排班制</small><b>主治獸醫師</b><span>6–14 萬＋抽成・臨床 2 年以上</span></a>
         <a class="opening" href="#jobs"><small>固定大夜班 21:30–09:30・建國／台北籌備院</small><b>大夜班主治獸醫師</b><span>15 萬起＋抽成・夜間急診</span></a>
       </div>
@@ -681,8 +690,8 @@ footer .edu .mark{height:22px}
 <section id="jobs" style="padding-bottom:40px">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="eyebrow">公告中的職缺</p><h2 class="h2">建國分院與台北籌備院正在找的醫師</h2></div>
-      <p class="lead" style="max-width:28em">以下內容來自正式職務說明書。建國分院位於高雄市苓雅區建國一路 195 號；大夜班主治也招募台北籌備院，可以一起參與新院的建立。直屬主管為各院院長。</p>
+      <div><p class="eyebrow">公告中的職缺</p><h2 class="h2">正在招募的醫師</h2></div>
+      <p class="lead" style="max-width:28em">建國分院與大夜班的內容來自正式職務說明書；大夜班主治也招募台北籌備院。岡燕、旗楠分院另徵可獨立看診的主治醫師。直屬主管為各院院長。</p>
     </div>
     <div class="jd-grid">
       <article class="jd">
@@ -733,6 +742,10 @@ footer .edu .mark{height:22px}
     </div>
 
 
+    <div class="more-jobs">
+      <a class="mj" href="#gangyan"><div><small>岡燕分院・中獸醫 × 老年照護</small><b>主治獸醫師 1–2 位</b><span class="d">可獨立看診</span></div><span class="go">看分院介紹 →</span></a>
+      <a class="mj" href="#qinan"><div><small>旗楠分院・心臟 × 腫瘤</small><b>主治獸醫師 1–2 位</b><span class="d">可獨立看診</span></div><span class="go">看分院介紹 →</span></a>
+    </div>
     <div class="cake-head">
       <div><p class="eyebrow">給應徵的你</p><h3>如果你是這樣的醫師，我們很想認識你</h3></div>
       <p class="lead" style="max-width:26em">面談不是考試。我們會請你聊聊印象深刻的病例、你怎麼和飼主溝通，以及你想往哪裡發展。</p>
@@ -1038,11 +1051,11 @@ const BRANCHES = [
   {id:"gangyan",rz:"高雄",name:"岡燕分院",city:"高雄",focus:"中獸醫 × 老年照護",
    pos:"發展中獸醫，著重老年動物照護，強調慢性病與整體體質調理，提供東西方醫學整合的照護選擇。",
    tags:["中獸醫","老年照護","慢性病調理","家醫科"],
-   people:[["翁興民 院長","屏科大獸醫碩士｜前慈愛主治、夜間急診｜家醫科、中獸醫","photos/dir-weng.jpg"]],jobs:[]},
+   people:[["翁興民 院長","屏科大獸醫碩士｜前慈愛主治、夜間急診｜家醫科、中獸醫","photos/dir-weng.jpg"]],jobs:[["主治獸醫師","1–2 位・可獨立看診"]]},
   {id:"qinan",rz:"高雄",name:"旗楠分院",city:"高雄",focus:"心臟 × 腫瘤",
    pos:"以心臟科與腫瘤科為主要發展方向，未來預計擴增新院區，致力提升當地整體醫療水準與服務量能。",
    tags:["心臟科","腫瘤科","院區擴增中"],
-   people:[["林智湧 院長","前宏力動物醫院資深主治｜內科、急重症、心臟、腫瘤","photos/dir-lin-zy.jpg"]],jobs:[]},
+   people:[["林智湧 院長","前宏力動物醫院資深主治｜內科、急重症、心臟、腫瘤","photos/dir-lin-zy.jpg"]],jobs:[["主治獸醫師","1–2 位・可獨立看診"]]},
   {id:"fengping",rz:"高雄",name:"鳳屏分院",city:"高雄",focus:"精緻全方位醫療",
    pos:"以精緻、全方位醫療為特色，院長專長內外科、對細節觀察力強，適合學習完整的基礎與進階診療邏輯。",
    tags:["全方位內外科","診療邏輯","細節觀察"],
