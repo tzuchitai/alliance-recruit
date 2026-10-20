@@ -614,6 +614,8 @@ section{padding-block:104px}
 /* ===== HONEST ===== */
 .honest{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.6fr);gap:56px}
 .hl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.hl.c3{grid-template-columns:repeat(3,minmax(0,1fr))}
+@media (max-width:900px){.hl.c3{grid-template-columns:minmax(0,1fr)}}
 .hc{border-radius:10px;background:var(--soft);padding:20px 22px;min-width:0}
 .hc b{display:block;font-size:.95rem;font-weight:600}
 .hc p{font-size:.84rem;color:var(--muted);margin-top:6px}
@@ -770,7 +772,7 @@ footer .edu .mark{height:22px}
 <section class="home" id="home">
   <div class="wrap">
     <div class="home-head"><div><p class="eyebrow">從這裡開始</p><h2 class="h2">你想先了解哪一部分？</h2></div><p class="lead" style="max-width:24em">點選有興趣的主題，或從左上角「目錄」隨時切換。</p></div>
-    <div class="tiles"><div class="tile-c"><span class="n">01</span><h3>認識聯盟</h3><p>我們是誰、由誰創立、事業版圖</p><ul><li><a href="#about">聯盟簡介</a></li><li><a href="#value">連鎖體系的價值</a></li><li><a href="#founder">創辦人</a></li><li><a href="#group">寵物百分百事業群</a></li></ul></div><div class="tile-c hot"><span class="n">02</span><h3>職缺與分院</h3><p>正在招募的職位與各院專科方向</p><ul><li><a href="#jobs">公告中的職缺</a></li><li><a href="#teaching">教學人才徵才</a></li><li><a href="#talent">臨床與教學人才計畫</a></li><li><a href="#branches">各分院定位</a></li></ul></div><div class="tile-c"><span class="n">03</span><h3>職涯與培育</h3><p>升遷路徑、學習制度與專科發展</p><ul><li><a href="#philosophy">職涯主軸</a></li><li><a href="#ladder">職涯成長階梯</a></li><li><a href="#learning">學習與培育制度</a></li><li><a href="#eye">眼科種子與線上討論會</a></li><li><a href="#tvesa">台灣獸醫卓越永續協會</a></li><li><a href="#advisors">醫療顧問</a></li></ul></div><div class="tile-c"><span class="n">04</span><h3>工作與待遇</h3><p>薪資福利、工作環境與團隊日常</p><ul><li><a href="#pay">薪資與福利</a></li><li><a href="#environment">工作環境</a></li><li><a href="#done">我們做過的事</a></li><li><a href="#honest">先說清楚的事</a></li></ul></div><div class="tile-c"><span class="n">05</span><h3>加入我們</h3><p>常見問題、教育中心的話與應徵方式</p><ul><li><a href="#faq">常見問題</a></li><li><a href="#apply">教育中心的話・應徵</a></li></ul></div></div>
+    <div class="tiles"><div class="tile-c"><span class="n">01</span><h3>認識聯盟</h3><p>我們是誰、由誰創立、事業版圖</p><ul><li><a href="#about">聯盟簡介</a></li><li><a href="#value">連鎖體系的價值</a></li><li><a href="#founder">創辦人</a></li><li><a href="#group">寵物百分百事業群</a></li></ul></div><div class="tile-c hot"><span class="n">02</span><h3>職缺與分院</h3><p>正在招募的職位與各院專科方向</p><ul><li><a href="#jobs">公告中的職缺</a></li><li><a href="#teaching">教學人才徵才</a></li><li><a href="#talent">臨床與教學人才計畫</a></li><li><a href="#branches">各分院定位</a></li></ul></div><div class="tile-c"><span class="n">03</span><h3>職涯與培育</h3><p>升遷路徑、學習制度與專科發展</p><ul><li><a href="#philosophy">職涯主軸</a></li><li><a href="#ladder">職涯成長階梯</a></li><li><a href="#learning">學習與培育制度</a></li><li><a href="#assistants">助理人才培育</a></li><li><a href="#eye">眼科種子與線上討論會</a></li><li><a href="#tvesa">台灣獸醫卓越永續協會</a></li><li><a href="#advisors">醫療顧問</a></li></ul></div><div class="tile-c"><span class="n">04</span><h3>工作與待遇</h3><p>薪資福利、工作環境與團隊日常</p><ul><li><a href="#pay">薪資與福利</a></li><li><a href="#environment">工作環境</a></li><li><a href="#done">我們做過的事</a></li><li><a href="#honest">先說清楚的事</a></li></ul></div><div class="tile-c"><span class="n">05</span><h3>加入我們</h3><p>常見問題、教育中心的話與應徵方式</p><ul><li><a href="#faq">常見問題</a></li><li><a href="#apply">教育中心的話・應徵</a></li></ul></div></div>
   </div>
 </section>
 <section id="about" style="padding-bottom:0">
@@ -838,6 +840,7 @@ footer .edu .mark{height:22px}
         <div class="pt-bar"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5L2 9z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/></svg></span><b>人才培育</b><div class="tags"><span>專科種子計畫</span><span>顧問指導</span><span>卓越講堂</span></div></div>
         <div class="pt-bar"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="6" cy="6" r="2"/><circle cx="18" cy="6" r="2"/><circle cx="12" cy="18" r="2"/><path d="M8 6h8M7 8l4 8M17 8l-4 8"/></svg></span><b>跨院網絡</b><div class="tags"><span>轉診</span><span>會診</span><span>跨院討論</span></div></div>
         <div class="pt-bar"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 012-2h2a2 2 0 012 2v2M3 13h18"/></svg></span><b>營運與行政</b><div class="tags"><span>醫療與行政分工</span><span>專心看診與進修</span></div></div>
+        <div class="pt-bar"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3"/><path d="M3 20v-1.5a5 5 0 015-5h2a5 5 0 015 5V20"/><circle cx="17.5" cy="9" r="2.2"/><path d="M17 14a4 4 0 014 4v2"/></svg></span><b>助理培育</b><div class="tags"><span>專業助理訓練</span><span>標準照護流程</span></div></div>
       </div>
       <div class="pt-side gold pri">主要活動</div>
       <div class="pt-pri">
@@ -1157,6 +1160,29 @@ footer .edu .mark{height:22px}
   </div>
 </section>
 
+<section id="assistants" style="padding-bottom:40px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">助理人才培育</p><h2 class="h2">醫師專心看診，背後有被系統培訓的助理團隊</h2></div>
+      <p class="lead" style="max-width:28em">聯盟教育中心不只培育醫師，也協助訓練專業助理人才，讓醫師與助理用同一套標準流程協作。</p>
+    </div>
+    <div class="hl c3">
+      <div class="hc"><b>先說實話</b><p>各院的助理人數與排班會隨營運調整，不一定每個時段都完全充足。我們不會用「一定夠」這種話來說服你。</p></div>
+      <div class="hc"><b>我們實際在做的</b><p>教育中心持續協助訓練專業助理人才，把助理需要的護理與監控技術，整理成有系統的課程。</p></div>
+      <div class="hc"><b>歡迎直接問</b><p>面談時，請直接詢問你有興趣的分院目前的助理配置與培訓狀況，我們如實回答。</p></div>
+    </div>
+    <article class="seed" style="margin-top:18px">
+      <div class="top"><h3>住院伴侶動物護理與監控技術</h3><span>助理訓練課程</span></div>
+      <dl>
+        <dt>課程重點</dt><dd>讓助理能依標準流程評估住院動物、監測生命徵象，並清楚回報給醫師</dd>
+        <dt>涵蓋主題</dt><dd>獸醫護理流程、生命徵象與黏膜監測、營養與餵食、血壓測量、靜脈穿刺、給藥途徑、輸液與輸血療法、氧氣治療與呼吸急救</dd>
+        <dt>學習方式</dt><dd>線上互動課程，搭配臨床情境題，並附熱量與輸液量計算工具</dd>
+        <dt>講師</dt><dd>戴子綺 醫師（聯盟教育中心負責人・龜山萬壽分院院長）</dd>
+      </dl>
+    </article>
+  </div>
+</section>
+
 <section id="advisors" style="padding-top:0">
   <div class="wrap">
     <div class="sec-head">
@@ -1301,6 +1327,7 @@ footer .edu .mark{height:22px}
       <div class="hc"><b>專科需要時間</b><p>主治考核通過後兩年才能申請種子計畫，計畫本身再兩到三年。病例要自己一個一個累積。</p></div>
       <div class="hc"><b>喘息連假不帶薪</b><p>15 天連假是讓你能出國、能休息的彈性，不是額外的有薪假。</p></div>
       <div class="hc full"><b>投保看實際薪資</b><p>以月薪 40,000 元計算，相較只用基本工資投保，每年勞退提撥多約 7,560 元，生育、傷病與退休給付也依實際投保計算。</p></div>
+      <div class="hc full"><b>助理人力會隨營運調整</b><p>各院的助理人數與排班會隨營運變動，不一定每個時段都完全充足，這點我們不做過度承諾。教育中心持續協助訓練專業助理人才，也歡迎你在面談時直接詢問該院目前的助理配置。<a href="#assistants" style="color:var(--gold-ink);font-weight:600;white-space:nowrap;margin-left:6px">看助理培育 →</a></p></div>
     </div>
   </div>
 </section>
@@ -1365,7 +1392,7 @@ footer .edu .mark{height:22px}
 <div class="scrim" id="scrim"></div>
 <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="網站目錄" hidden>
   <div class="dh"><b>想看哪一部分？</b><button type="button" id="menu-close" aria-label="關閉目錄">×</button></div>
-  <nav><div class="dg"><p>認識聯盟</p><a href="#about" data-sec="about">聯盟簡介</a><a href="#value" data-sec="value">連鎖體系的價值</a><a href="#founder" data-sec="founder">創辦人</a><a href="#group" data-sec="group">寵物百分百事業群</a></div><div class="dg"><p>職缺與分院</p><a href="#jobs" data-sec="jobs">公告中的職缺</a><a href="#teaching" data-sec="teaching">教學人才徵才</a><a href="#talent" data-sec="talent">臨床與教學人才計畫</a><a href="#branches" data-sec="branches">各分院定位</a></div><div class="dg"><p>職涯與培育</p><a href="#philosophy" data-sec="philosophy">職涯主軸</a><a href="#ladder" data-sec="ladder">職涯成長階梯</a><a href="#learning" data-sec="learning">學習與培育制度</a><a href="#eye" data-sec="eye">眼科種子與線上討論會</a><a href="#tvesa" data-sec="tvesa">台灣獸醫卓越永續協會</a><a href="#advisors" data-sec="advisors">醫療顧問</a></div><div class="dg"><p>工作與待遇</p><a href="#pay" data-sec="pay">薪資與福利</a><a href="#environment" data-sec="environment">工作環境</a><a href="#done" data-sec="done">我們做過的事</a><a href="#honest" data-sec="honest">先說清楚的事</a></div><div class="dg"><p>加入我們</p><a href="#faq" data-sec="faq">常見問題</a><a href="#apply" data-sec="apply">教育中心的話・應徵</a></div></nav>
+  <nav><div class="dg"><p>認識聯盟</p><a href="#about" data-sec="about">聯盟簡介</a><a href="#value" data-sec="value">連鎖體系的價值</a><a href="#founder" data-sec="founder">創辦人</a><a href="#group" data-sec="group">寵物百分百事業群</a></div><div class="dg"><p>職缺與分院</p><a href="#jobs" data-sec="jobs">公告中的職缺</a><a href="#teaching" data-sec="teaching">教學人才徵才</a><a href="#talent" data-sec="talent">臨床與教學人才計畫</a><a href="#branches" data-sec="branches">各分院定位</a></div><div class="dg"><p>職涯與培育</p><a href="#philosophy" data-sec="philosophy">職涯主軸</a><a href="#ladder" data-sec="ladder">職涯成長階梯</a><a href="#learning" data-sec="learning">學習與培育制度</a><a href="#assistants" data-sec="assistants">助理人才培育</a><a href="#eye" data-sec="eye">眼科種子與線上討論會</a><a href="#tvesa" data-sec="tvesa">台灣獸醫卓越永續協會</a><a href="#advisors" data-sec="advisors">醫療顧問</a></div><div class="dg"><p>工作與待遇</p><a href="#pay" data-sec="pay">薪資與福利</a><a href="#environment" data-sec="environment">工作環境</a><a href="#done" data-sec="done">我們做過的事</a><a href="#honest" data-sec="honest">先說清楚的事</a></div><div class="dg"><p>加入我們</p><a href="#faq" data-sec="faq">常見問題</a><a href="#apply" data-sec="apply">教育中心的話・應徵</a></div></nav>
   <div class="df"><a class="btn gold" href="https://forms.gle/SVXiBVjkQ3kXTBmr6" target="_blank" rel="noopener">填寫應徵表單 ↗</a><a class="top" href="#home">回到首頁</a></div>
 </aside>
 <footer><div class="wrap"><span class="edu"><span class="mark edu" aria-hidden="true"></span>EDUCATION CENTER</span><span><a href="https://tzuchitai.github.io/tvesa-site/" target="_blank" rel="noopener" style="color:inherit">台灣獸醫卓越永續協會（籌備中）↗</a> · 聯盟動物醫院 · 寵物百分百股份有限公司 · 聯盟教育中心　照片：聯盟動物醫院官網</span></div></footer>
@@ -1534,7 +1561,7 @@ render(hi >= 0 ? hi : cur, false);
   drawer.addEventListener("click", e => { if (e.target.closest("a[href^='#']")) shut(false); });
 
   const hero = document.querySelector("header.hero"), home = document.getElementById("home");
-  const pageIds = ["about","value","group","branches","jobs","teaching","career","learning","advisors","environment","done","pay","honest","faq","apply"];
+  const pageIds = ["about","value","group","branches","jobs","teaching","career","learning","assistants","advisors","environment","done","pay","honest","faq","apply"];
   const pages = pageIds.map(id => document.getElementById(id)).filter(Boolean);
   const parentOf = {talent: "teaching", founder: "about", philosophy: "career", ladder: "career", eye: "learning", tvesa: "learning"};
   BRANCHES.forEach(b => parentOf[b.id] = "branches");
