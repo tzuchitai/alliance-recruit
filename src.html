@@ -131,6 +131,30 @@ section{padding-block:104px}
 .founder-team img{width:210px;aspect-ratio:3/2;object-fit:cover;object-position:center;border-radius:8px;flex:none}
 .founder-team p{font-size:.84rem;color:var(--muted)}
 
+/* ===== GROUP ===== */
+.group{padding-top:96px}
+.group-head{text-align:center;max-width:44em;margin:0 auto}
+.group-head .h2{margin-top:8px}
+.group-head .tags{display:flex;justify-content:center;flex-wrap:wrap;gap:8px 14px;margin-top:14px;font-size:.88rem;color:var(--muted)}
+.group-head .tags span+span::before{content:"×";margin-right:14px;color:var(--gold-ink)}
+.group-head .goal{margin-top:16px;font-size:1.05rem;font-weight:600;color:var(--gold-ink);letter-spacing:.06em}
+.gp{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:36px}
+.gpc{border-radius:14px;border:1px solid var(--line);padding:24px 22px;text-align:center;min-width:0;background:var(--bg)}
+.gpc.edu{border-color:#8A2A33;box-shadow:inset 0 0 0 1px #8A2A33}
+.gpc h3{font-size:1.2rem;font-weight:600}
+.gpc .bar{width:28px;height:2px;background:var(--gold);margin:12px auto}
+.gpc p{font-size:.86rem;color:var(--muted)}
+.gpc p b{display:block;color:var(--ink);font-weight:600;font-size:.92rem;margin-bottom:4px}
+.brands{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;margin-top:40px;border-top:1px solid var(--line)}
+.br{padding:22px 18px;min-width:0;border-bottom:1px solid var(--line)}
+.br+.br{border-left:1px solid var(--line)}
+.br .logo{display:flex;align-items:center;gap:8px}
+.br .logo .mark{height:20px;aspect-ratio:452/200}
+.br .logo b{font-size:.95rem;font-weight:600}
+.br p{font-size:.82rem;color:var(--muted);margin-top:10px}
+.br.here{background:var(--gold-tint)}
+.br.here .you{display:inline-block;margin-top:10px;font-size:.7rem;font-weight:600;color:var(--gold-ink);letter-spacing:.06em}
+
 /* ===== BRANCHES ===== */
 .dept{background:var(--soft);margin-top:104px}
 .dept-grid{display:grid;grid-template-columns:300px minmax(0,1fr);gap:56px;align-items:start}
@@ -387,6 +411,10 @@ footer .edu .mark{height:22px}
 @keyframes fade{from{opacity:.35}}
 
 @media (max-width:1000px){
+  .gp{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .brands{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .br+.br{border-left:0}
+  .br:nth-child(2n){border-left:1px solid var(--line)}
   .pillars{grid-template-columns:repeat(2,minmax(0,1fr))}
   .eye{grid-template-columns:minmax(0,1fr)}
   .adv{grid-template-columns:minmax(0,1fr)}
@@ -411,6 +439,9 @@ footer .edu .mark{height:22px}
 }
 @media (max-width:640px){
   section{padding-block:72px}
+  .gp,.brands{grid-template-columns:minmax(0,1fr)}
+  .br:nth-child(2n){border-left:0}
+  .group{padding-top:72px}
   .triad,.pillars{grid-template-columns:minmax(0,1fr)}
   .triad::before{left:50%;right:auto;top:8%;bottom:8%;width:2px;height:auto}
   .why{margin-bottom:64px}
@@ -519,6 +550,30 @@ footer .edu .mark{height:22px}
         <div class="values"><span>專業</span><span>熱情</span><span>紀律</span></div>
         <div class="founder-team"><img src="photos/founder-team.jpg" alt="聯盟動物醫院的醫師們" loading="lazy"><p>「守護寵物的健康」是獸醫師誓詞，也是我們每天在診間落實的事。</p></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="group" id="group">
+  <div class="wrap">
+    <div class="group-head">
+      <p class="eyebrow">寵物百分百事業群</p>
+      <h2 class="h2">你加入的，是一個由獸醫師建立的事業群</h2>
+      <div class="tags"><span>專業醫療</span><span>優質產品</span><span>數位科技</span><span>教育培育</span></div>
+      <p class="goal">打造華人第一的寵物健康照護品牌</p>
+    </div>
+    <div class="gp">
+      <div class="gpc"><h3>醫療服務</h3><div class="bar"></div><p><b>台灣 9 家院所・美國加州 1 家院所</b>影像・心臟・眼科・腫瘤專科</p></div>
+      <div class="gpc"><h3>醫藥與產品</h3><div class="bar"></div><p><b>全台 18 家醫藥通路據點</b>獸研所・動物醫學保健品</p></div>
+      <div class="gpc edu"><h3>聯盟教育中心</h3><div class="bar"></div><p><b>900 位獸醫師社群</b>臨床教育・專科培訓・國際交流</p></div>
+      <div class="gpc"><h3>數位健康平台</h3><div class="bar"></div><p><b>會員管理・醫療數據分析</b>AI 智慧照護・終身健康管理</p></div>
+    </div>
+    <div class="brands">
+      <div class="br"><div class="logo"><span class="mark edu" style="--c:#7A4A2E" aria-hidden="true"></span><b>百分百寵物生活館</b></div><p>獸醫師開的寵物店。精選驅蟲藥品、處方飼料、營養品、寵物美容與用品，門市店員為受過半年衛教與商品訓練的寵物諮詢師。</p></div>
+      <div class="br"><div class="logo"><span class="mark edu" style="--c:#8C9A7E" aria-hidden="true"></span><b>獸研所</b></div><p>台灣獸醫師團隊成立的寵物品牌，研發測試長達一年以上，開發出可以每天食用的腎臟保養主食罐，主打醫學保養。</p></div>
+      <div class="br here"><div class="logo"><span class="mark edu" style="--c:#D9A23A" aria-hidden="true"></span><b>聯盟動物醫院</b></div><p>致力於發展專科的連鎖醫療體系，總院為少數擁有 24H 夜間急診的動物醫院，目前全台已有 9 間院所。</p><span class="you">你應徵的就是這裡</span></div>
+      <div class="br"><div class="logo"><span class="mark edu" style="--c:#8A2A33" aria-hidden="true"></span><b>百分百獸醫考網</b></div><p>全台第一的獸醫師考補習班，提供教材與課程，培育獸醫師人才，強化獸醫體系的教育中心。</p></div>
+      <div class="br"><div class="logo"><span class="mark edu" style="--c:#7E8FB0" aria-hidden="true"></span><b>專業獸醫聯盟</b></div><p>臺灣碩騰藥品經銷代理，結合獸醫師共同採購的線上平台。小型獸醫院也能以較低成本採購，協助推動數位轉型與資訊共享。</p></div>
     </div>
   </div>
 </section>
