@@ -147,6 +147,8 @@ section{padding-block:104px}
 .tab{font-family:inherit;font-size:.82rem;padding:7px 14px;border-radius:6px;border:1px solid var(--line);background:var(--bg);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:6px}
 .tab[aria-selected="true"]{background:var(--dark);color:var(--on-dark);border-color:var(--dark)}
 .tab .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
+.tab-hint{display:flex;align-items:center;gap:6px;margin-top:10px;font-size:.76rem;color:var(--muted)}
+.tab-hint .dot{width:6px;height:6px;border-radius:50%;background:var(--gold)}
 .region-sep{font-size:.7rem;letter-spacing:.14em;color:var(--muted);padding:0 2px 0 8px}
 .region-sep:first-child{padding-left:0}
 .card-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:22px}
@@ -493,12 +495,13 @@ footer .edu .mark{height:22px}
   <div class="wrap dept-grid">
     <div class="dept-intro">
       <p class="eyebrow">各分院定位</p>
-      <h2 class="h2">選院，比選薪水更重要</h2>
-      <p class="lead">每間分院都有自己的專科主軸與院長。切換分院，看定位、院長專長與目前職缺。金點表示有公告職缺。</p>
+      <h2 class="h2">找到適合你專科方向的院所</h2>
+      <p class="lead">每間分院都有自己的專科主軸、病例類型與院長專長。先了解各院的發展重點，再選擇最能累積你想要經驗的環境。</p>
       <div class="arrows"><button type="button" id="prev" aria-label="上一間分院">←</button><button type="button" id="next" class="on" aria-label="下一間分院">→</button></div>
     </div>
     <div>
       <div class="tabs" id="tabs" role="tablist" aria-label="分院"></div>
+      <p class="tab-hint"><span class="dot" aria-hidden="true"></span>金點表示有公告中的職缺</p>
       <div class="card-row" id="cards" role="tabpanel" aria-live="polite"></div>
     </div>
   </div>
