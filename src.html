@@ -244,6 +244,18 @@ section{padding-block:104px}
 .li h3 small{font-weight:400;color:var(--muted);font-size:.78rem;margin-left:8px}
 .li p{font-size:.86rem;color:var(--muted);margin-top:6px}
 
+/* ===== ADVISORS ===== */
+.adv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.advc{display:grid;grid-template-columns:180px minmax(0,1fr);gap:24px;border-radius:14px;border:1px solid var(--line);padding:22px;background:var(--bg);min-width:0}
+.advc .pic{border-radius:10px;background:#fff;overflow:hidden;align-self:start;aspect-ratio:220/284;border:1px solid var(--line)}
+.advc .pic img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.advc h3{font-size:1.4rem;font-weight:500}
+.advc h3 small{font-size:.8rem;color:var(--muted);margin-left:6px;font-weight:500}
+.advc .sp{display:inline-block;margin-top:8px;font-size:.78rem;font-weight:600;color:var(--gold-ink);background:var(--gold-tint);padding:3px 10px;border-radius:4px}
+.advc ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:5px;font-size:.84rem;color:var(--muted)}
+.advc li{display:flex;gap:9px}
+.advc li::before{content:"";flex:none;width:5px;height:5px;border-radius:50%;background:var(--gold);margin-top:.7em}
+
 /* ===== DONE (activities) ===== */
 .done-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));grid-auto-rows:230px;gap:14px}
 .ph{position:relative;margin:0;border-radius:10px;overflow:hidden;background:var(--soft);min-width:0}
@@ -318,6 +330,7 @@ footer .edu .mark{height:22px}
 @keyframes fade{from{opacity:.35}}
 
 @media (max-width:1000px){
+  .adv{grid-template-columns:minmax(0,1fr)}
   .founder{grid-template-columns:minmax(0,1fr);gap:28px}
   .founder-pic{max-width:420px}
   .jd-grid{grid-template-columns:minmax(0,1fr)}
@@ -339,6 +352,7 @@ footer .edu .mark{height:22px}
 }
 @media (max-width:640px){
   section{padding-block:72px}
+  .advc{grid-template-columns:110px minmax(0,1fr);gap:16px;padding:16px}
   .founder-team{flex-direction:column;align-items:flex-start}
   .founder-team img{width:100%}
   .jd{padding:22px}
@@ -566,6 +580,46 @@ footer .edu .mark{height:22px}
         <div class="li"><h3>專科種子醫師計畫</h3><p>主治考核通過兩年後可申請，為期兩到三年，第二年開始獨立接專科門診。</p></div>
         <div class="li"><h3>導生關懷制度</h3><p>從適應工作、累積病例到找專科方向，每個階段都有導師陪你一起想。</p></div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="advisors" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">醫療顧問</p><h2 class="h2">持續提升醫療品質，讓體系更有效率、更安全、更專業</h2></div>
+    </div>
+    <div class="adv">
+      <article class="advc">
+        <div class="pic"><img src="photos/adv-hsu.jpg" alt="醫療顧問許立翰醫師" loading="lazy"></div>
+        <div>
+          <h3>許立翰<small>醫師</small></h3>
+          <span class="sp">內視鏡微創手術</span>
+          <ul>
+            <li>嘉義大學獸醫系學士</li>
+            <li>現任臺灣、大陸多家動物醫院內視鏡微創無創手術諮詢顧問與團隊培訓講師</li>
+            <li>德國歐洲獸醫高級學院（ESAVS）胸腹腔內視鏡手術受訓認證</li>
+            <li>infiniti 動態透視介入性治療手術受訓認證</li>
+            <li>太僕連鎖動物醫院內視鏡微創手術專科部主任、臺北太僕副院長</li>
+            <li>左岸內視鏡暨微創手術中心、松山動物醫院獸醫師</li>
+            <li>〈獸醫菜鳥大學〉線上臨床再教育課程總召集人</li>
+          </ul>
+        </div>
+      </article>
+      <article class="advc">
+        <div class="pic"><img src="photos/adv-tsai.jpg" alt="醫療顧問蔡文智醫師" loading="lazy"></div>
+        <div>
+          <h3>蔡文智<small>醫師</small></h3>
+          <span class="sp">小動物眼科與外科</span>
+          <ul>
+            <li>台灣大學臨床所外科及眼科碩士</li>
+            <li>台大動物醫院外科住院醫師、外科及眼科住院醫師</li>
+            <li>快樂動物醫院主治醫師</li>
+            <li>遠見眼科動物醫院主治醫師</li>
+            <li>恩亞動物醫院主治醫師</li>
+          </ul>
+        </div>
+      </article>
     </div>
   </div>
 </section>
