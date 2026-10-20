@@ -428,9 +428,9 @@ footer .edu .mark{height:22px}
     </div>
     <div class="duo">
       <div class="tile stats">
-        <div class="hiring"><b>徵</b><span>NOW HIRING</span><em>建國分院</em></div>
+        <div class="hiring"><b>徵</b><span>NOW HIRING</span><em>建國・台北</em></div>
         <a class="opening" href="#jobs"><small>全職・排班制</small><b>主治獸醫師</b><span>6–14 萬＋抽成・臨床 2 年以上</span></a>
-        <a class="opening" href="#jobs"><small>固定大夜班 21:30–09:30</small><b>大夜班主治獸醫師</b><span>15 萬起＋抽成・夜間急診</span></a>
+        <a class="opening" href="#jobs"><small>固定大夜班 21:30–09:30・建國／台北籌備院</small><b>大夜班主治獸醫師</b><span>15 萬起＋抽成・夜間急診</span></a>
       </div>
     </div>
     <div class="founder" id="founder">
@@ -468,8 +468,8 @@ footer .edu .mark{height:22px}
 <section id="jobs" style="padding-bottom:40px">
   <div class="wrap">
     <div class="sec-head">
-      <div><p class="eyebrow">公告中的職缺</p><h2 class="h2">建國分院正在找的兩位醫師</h2></div>
-      <p class="lead" style="max-width:28em">以下內容來自正式職務說明書。工作地點：高雄市苓雅區建國一路 195 號，直屬主管為院長。</p>
+      <div><p class="eyebrow">公告中的職缺</p><h2 class="h2">建國分院與台北籌備院正在找的醫師</h2></div>
+      <p class="lead" style="max-width:28em">以下內容來自正式職務說明書。建國分院位於高雄市苓雅區建國一路 195 號；大夜班主治也招募台北籌備院，可以一起參與新院的建立。直屬主管為各院院長。</p>
     </div>
     <div class="jd-grid">
       <article class="jd">
@@ -495,7 +495,7 @@ footer .edu .mark{height:22px}
         <div class="apply-row"><a class="btn" href="https://forms.gle/SVXiBVjkQ3kXTBmr6" target="_blank" rel="noopener">應徵主治獸醫師 ↗</a></div>
       </article>
       <article class="jd night">
-        <div class="top"><div><span class="where">建國分院・固定大夜班</span><h3>大夜班主治獸醫師（急診）</h3></div><span class="badge">夜間急診</span></div>
+        <div class="top"><div><span class="where">建國分院／台北籌備院・固定大夜班</span><h3>大夜班主治獸醫師（急診）</h3></div><span class="badge">夜間急診</span></div>
         <span class="pay">15 萬起<small>月薪，搭配業績抽成</small></span>
         <div class="facts">
           <div><b>時段</b><span>21:30–09:30（含 2 小時用餐）</span></div>
@@ -509,6 +509,7 @@ footer .edu .mark{height:22px}
           <li>X 光、超音波、血檢判讀；安撫情緒激動的飼主</li>
           <li>09:30 與日班醫師交班，必要時聯繫轉診</li>
           <li>帶領夜班助理，維持夜間院內運作</li>
+          <li>台北籌備院：參與新院夜間流程與 SOP 建立</li>
         </ul></div>
         <div class="two">
           <div><h4>必要條件</h4><ul><li>獸醫師執照及執業資格</li><li>熟稔內外科學理</li><li>通過院內急重症臨場反應測驗</li><li>能配合固定大夜班</li></ul></div>
@@ -685,6 +686,11 @@ footer .edu .mark{height:22px}
 const FORM = "https://forms.gle/SVXiBVjkQ3kXTBmr6";
 // 由北到南。people: [姓名職稱, 簡介, 照片]；jobs 空陣列＝目前沒有公告職缺。
 const BRANCHES = [
+  {id:"taipei",rz:"北部",name:"台北籌備院",city:"台北・新院籌備中",focus:"新院籌備中",
+   pos:"聯盟正在台北籌備新院所。現在加入，可以從第一天開始參與新院的夜間急診流程與 SOP 建立。",
+   tags:["新院籌備","夜間急診","參與流程建立"],
+   people:[], jd:true, note:"院長與開幕時間確定後會更新",
+   jobs:[["大夜班主治（急診）","15 萬起＋抽成"]]},
   {id:"linkou",rz:"北部",name:"林口文化分院",city:"新北市林口區",focus:"腫瘤專科養成基地",
    pos:"北部腫瘤專科發展據點，提供與教學醫院相同深度的腫瘤學習內容與診療訓練。",
    tags:["腫瘤專科","教學醫院等級訓練","北區區域加給"],
@@ -734,7 +740,7 @@ function render(i, push){
   tabs.querySelectorAll(".tab").forEach(t => t.setAttribute("aria-selected", +t.dataset.i === cur));
   const people = b.people.map(([n, d, img]) =>
     `<figure class="pcard"><img src="${img}" alt="${esc(n)}" loading="lazy"><figcaption class="who"><b>${esc(n)}</b><span>${esc(d)}</span></figcaption></figure>`).join("")
-    || `<div class="pcard empty"><span>院長資料整理中<br>歡迎填表單詢問</span></div>`;
+    || `<div class="pcard empty"><span>${b.note ? esc(b.note) : "院長資料整理中<br>歡迎填表單詢問"}</span></div>`;
   const jobs = b.jobs.length
     ? b.jobs.map(([t, s]) => `<div class="job"><span>${esc(t)}</span><small>${esc(s)}</small></div>`).join("")
     : `<div class="job none">目前沒有公告職缺，歡迎詢問</div>`;
