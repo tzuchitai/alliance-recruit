@@ -137,6 +137,52 @@ section{padding-block:104px}
 .icard .meta{font-size:.82rem;color:var(--muted)}
 .icard .apply-link{font-size:.84rem;font-weight:600;text-decoration:none;border-bottom:1.5px solid var(--gold);align-self:flex-start}
 
+/* ===== JOBS (JD) ===== */
+.jd-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.jd{border-radius:14px;border:1px solid var(--line);background:var(--bg);padding:30px;display:flex;flex-direction:column;gap:20px;min-width:0}
+.jd.night{background:#1F2328;color:#F2F2F3;border-color:#1F2328}
+.jd .top{display:flex;justify-content:space-between;align-items:start;gap:12px;flex-wrap:wrap}
+.jd .where{font-size:.78rem;color:var(--muted)}
+.jd.night .where,.jd.night .muted{color:#A9AEB5}
+.jd h3{font-size:1.45rem;font-weight:500;margin-top:4px}
+.jd .badge{font-size:.72rem;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--gold);color:#1F2328;white-space:nowrap}
+.jd .pay{font-weight:300;font-size:clamp(2rem,3.6vw,2.6rem);letter-spacing:-.02em;line-height:1.1;display:block}
+.jd .pay small{font-size:.36em;font-weight:500;margin-left:6px;letter-spacing:0}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.facts div{border-radius:8px;background:var(--soft);padding:10px 12px;min-width:0}
+.jd.night .facts div{background:#2A2E34}
+.facts b{display:block;font-size:.7rem;font-weight:500;color:var(--muted);letter-spacing:.04em}
+.jd.night .facts b{color:#A9AEB5}
+.facts span{display:block;font-size:.86rem;font-weight:500;margin-top:2px}
+.jd h4{margin:0 0 8px;font-size:.78rem;font-weight:600;letter-spacing:.06em;color:var(--gold-ink)}
+.jd.night h4{color:#EBB649}
+.jd ul{margin:0;padding:0;list-style:none;display:grid;gap:6px;font-size:.86rem}
+.jd li{display:flex;gap:10px}
+.jd li::before{content:"";flex:none;width:5px;height:5px;border-radius:50%;background:var(--gold);margin-top:.7em}
+.jd .two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.jd .apply-row{margin-top:auto;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.jd.night .btn{background:#EBB649;color:#1F2328}
+.grades{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:18px}
+.grade{border-radius:10px;background:var(--soft);padding:20px;min-width:0}
+.grade .g{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+.grade .g b{font-size:1.1rem;font-weight:600}
+.grade .g span{font-size:.78rem;font-weight:600;color:var(--gold-ink)}
+.grade p{font-size:.84rem;color:var(--muted);margin-top:8px}
+.grade p+p{margin-top:4px}
+.cake-head{margin:64px 0 22px;display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap}
+.cake-head h3{font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:500;margin-top:6px}
+.cake{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.ck{border-radius:12px;border:1px solid var(--line);padding:22px;min-width:0;background:var(--bg)}
+.ck.att{border-color:#8A2A33;box-shadow:inset 0 0 0 1px #8A2A33}
+.ck .l{display:flex;align-items:baseline;gap:10px}
+.ck .l b{font-weight:300;font-size:2.6rem;line-height:1}
+.ck .l span{font-size:.92rem;font-weight:600}
+.ck .l em{font-style:normal;font-size:.72rem;color:var(--muted);margin-left:auto}
+.ck ul{margin:14px 0 0;padding:0;list-style:none;display:grid;gap:6px;font-size:.84rem;color:var(--muted)}
+.ck .veto{display:inline-block;margin-top:14px;font-size:.72rem;font-weight:600;color:#fff;background:#8A2A33;padding:3px 9px;border-radius:4px}
+.how{margin-top:14px;border-radius:12px;background:var(--gold-tint);padding:20px 24px;display:flex;gap:10px 28px;flex-wrap:wrap;font-size:.86rem}
+.how b{font-weight:600}
+
 /* ===== CAREER ===== */
 .sec-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:44px}
 .sec-head .h2{margin-top:8px}
@@ -241,6 +287,8 @@ footer .edu .mark{height:22px}
 @keyframes fade{from{opacity:.35}}
 
 @media (max-width:1000px){
+  .jd-grid{grid-template-columns:minmax(0,1fr)}
+  .cake{grid-template-columns:repeat(2,minmax(0,1fr))}
   .side-note{display:none}
   .panel{min-height:580px}
   .panel .photo{right:-10%;height:74%}
@@ -258,6 +306,8 @@ footer .edu .mark{height:22px}
 }
 @media (max-width:640px){
   section{padding-block:72px}
+  .jd{padding:22px}
+  .jd .two,.facts,.grades,.cake{grid-template-columns:minmax(0,1fr)}
   .done-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:170px;gap:10px}
   .posters-wrap{overflow-x:auto;margin-inline:-20px;padding-inline:20px}
   .posters{grid-template-columns:repeat(5,140px)}
@@ -302,7 +352,7 @@ footer .edu .mark{height:22px}
       <div class="hero-copy">
         <h1>2026 獸醫師招募<br>醫療不孤單，病例有人一起討論。</h1>
         <p>9 間院所，每一間的專科方向都不同。各院定位、院長專長、薪資與培育制度都整理在這裡。</p>
-        <a class="btn" href="#branches">查看各分院</a>
+        <a class="btn" href="#jobs">看公告職缺</a>
       </div>
       <div class="float">
         <span class="ico"><span class="mark edu" aria-hidden="true"></span></span>
@@ -350,6 +400,80 @@ footer .edu .mark{height:22px}
       <div class="tabs" id="tabs" role="tablist" aria-label="分院"></div>
       <div class="card-row" id="cards" role="tabpanel" aria-live="polite"></div>
     </div>
+  </div>
+</section>
+
+<section id="jobs" style="padding-bottom:40px">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><p class="eyebrow">公告中的職缺</p><h2 class="h2">建國分院正在找的兩位醫師</h2></div>
+      <p class="lead" style="max-width:28em">以下內容來自正式職務說明書。工作地點：高雄市苓雅區建國一路 195 號，直屬主管為院長。</p>
+    </div>
+    <div class="jd-grid">
+      <article class="jd">
+        <div class="top"><div><span class="where">建國分院・全職排班制</span><h3>主治獸醫師</h3></div><span class="badge">三級／二級／一級</span></div>
+        <span class="pay">6–14 萬<small>常態月薪，另有抽成可挑戰更高</small></span>
+        <div class="facts">
+          <div><b>年資</b><span>臨床 2 年以上</span></div>
+          <div><b>工時</b><span>週工時 40 小時，含假日／夜診輪值</span></div>
+          <div><b>專長佳者</b><span>心臟、內科、內分泌、影像、麻醉</span></div>
+          <div><b>發展科別</b><span>內科、腫瘤、特寵、貓科、外科、影像</span></div>
+        </div>
+        <div><h4>主要職責</h4><ul>
+          <li>門診、住院與手術，依職等獨立處理常見至複雜病例</li>
+          <li>參與急診與術後併發處理，發起或接受院內外會診</li>
+          <li>向飼主說明病情、療程、費用與預後</li>
+          <li>病歷完整、處方與管制藥品合規、落實院內感控</li>
+          <li>參與病例討論與教育訓練，帶領助理與新進醫師</li>
+        </ul></div>
+        <div class="two">
+          <div><h4>必要條件</h4><ul><li>中華民國獸醫師證書，可辦理執業登記</li><li>臨床年資符合應徵職等</li></ul></div>
+          <div><h4>加分條件</h4><ul><li>專科學會會員或認證</li><li>英文文獻閱讀能力</li><li>教學醫院、專科醫院或主治經歷</li></ul></div>
+        </div>
+        <div class="apply-row"><a class="btn" href="https://forms.gle/SVXiBVjkQ3kXTBmr6" target="_blank" rel="noopener">應徵主治獸醫師 ↗</a></div>
+      </article>
+      <article class="jd night">
+        <div class="top"><div><span class="where">建國分院・固定大夜班</span><h3>大夜班主治獸醫師（急診）</h3></div><span class="badge">夜間急診</span></div>
+        <span class="pay">15 萬起<small>月薪，搭配業績抽成</small></span>
+        <div class="facts">
+          <div><b>時段</b><span>21:30–09:30（含 2 小時用餐）</span></div>
+          <div><b>工時</b><span>4 週變形工時 160 小時，約 16 班</span></div>
+          <div><b>年資</b><span>小動物臨床 2 年以上</span></div>
+          <div><b>班別</b><span>固定大夜，不輪班；超時給付加班費</span></div>
+        </div>
+        <div><h4>主要職責</h4><ul>
+          <li>內外科急診檢傷、穩定與處置：導尿、腸胃異物、腫瘤破裂、GDV、剖腹產</li>
+          <li>夜間巡房、重症監控、急診手術與麻醉管理</li>
+          <li>X 光、超音波、血檢判讀；安撫情緒激動的飼主</li>
+          <li>09:30 與日班醫師交班，必要時聯繫轉診</li>
+          <li>帶領夜班助理，維持夜間院內運作</li>
+        </ul></div>
+        <div class="two">
+          <div><h4>必要條件</h4><ul><li>獸醫師執照及執業資格</li><li>熟稔內外科學理</li><li>通過院內急重症臨場反應測驗</li><li>能配合固定大夜班</li></ul></div>
+          <div><h4>加分條件</h4><ul><li>心臟、內科、內分泌、影像或麻醉專長</li><li>急診、重症或 24 小時醫院經驗</li><li>能獨立執行急診手術</li></ul></div>
+        </div>
+        <div class="apply-row"><a class="btn" href="https://forms.gle/SVXiBVjkQ3kXTBmr6" target="_blank" rel="noopener">應徵大夜班主治 ↗</a></div>
+      </article>
+    </div>
+
+    <div class="grades">
+      <div class="grade"><div class="g"><b>三級主治</b><span>臨床 2 年以上</span></div><p>獨立處理常見內外科門診與一般手術，複雜病例能及時會診。</p><p>可指導助理基本臨床技術。</p></div>
+      <div class="grade"><div class="g"><b>二級主治</b><span>臨床 5 年以上</span></div><p>獨立處理複雜病例與急重症，具一項專科發展方向。</p><p>帶領實習醫師與新進醫師。</p></div>
+      <div class="grade"><div class="g"><b>一級主治</b><span>臨床 8 年以上</span></div><p>院內疑難病例與重大手術的主要判斷者，具專科專長。</p><p>負責院內醫師培育，具對外教學或學會經驗。</p></div>
+    </div>
+    <p class="lead" style="margin-top:10px;font-size:.8rem">臨床年資以取得獸醫師執照後的執業年資計算。</p>
+
+    <div class="cake-head">
+      <div><p class="eyebrow">面試怎麼評估</p><h3>我們用 CAKE 四個面向看一位醫師</h3></div>
+      <p class="lead" style="max-width:26em">每個面向 5 分，共 20 分。評分者至少兩位（院長與區經理），經歷會以履歷、在職證明與推薦人查核確認。</p>
+    </div>
+    <div class="cake">
+      <div class="ck"><div class="l"><b>C</b><span>能力</span><em>Capability</em></div><ul><li>跨專科臨床判斷力</li><li>醫病溝通與飼主關係</li><li>助理與新進醫師指導</li></ul></div>
+      <div class="ck att"><div class="l"><b>A</b><span>態度</span><em>Attitude</em></div><ul><li>臨床守門人的責任感：不為業績推診</li><li>嚴謹與誠實：願意接受同儕檢視</li><li>開放與終身學習</li></ul><span class="veto">態度是否決項</span></div>
+      <div class="ck"><div class="l"><b>K</b><span>知識</span><em>Knowledge</em></div><ul><li>跨專科臨床知識與治療指引</li><li>藥事、動保與感控法規</li><li>特定專科深度</li></ul></div>
+      <div class="ck"><div class="l"><b>E</b><span>經驗</span><em>Experience</em></div><ul><li>臨床年資與案例量</li><li>重大手術與急重症處理</li><li>教學或對外分享經驗</li></ul></div>
+    </div>
+    <div class="how"><span><b>情境題</b>　例如老犬嘔吐加精神差，初步處置順序</span><span><b>角色扮演</b>　飼主嫌貴、質疑誤診</span><span><b>行為事件訪談</b>　說一次你判斷錯誤的經驗</span></div>
   </div>
 </section>
 
@@ -441,7 +565,11 @@ footer .edu .mark{height:22px}
       <div class="perk"><b>喘息連假</b><span>年資滿一年可申請 15 天（不帶薪），每年一次</span></div>
       <div class="perk"><b>生日假</b><span>生日當月享生日假</span></div>
       <div class="perk"><b>進修獎金</b><span>健診醫師以上簽約即享</span></div>
-      <div class="perk"><b>實際薪資投保</b><span>勞健保、勞退依實際薪資投保</span></div>
+      <div class="perk"><b>實際薪資投保</b><span>勞健保、6% 勞退依實際薪資投保，另有員工團保</span></div>
+      <div class="perk"><b>獎金分紅</b><span>團體業績分紅、績優獎金、三節獎金／禮品</span></div>
+      <div class="perk"><b>加班費</b><span>超時正常給付加班費</span></div>
+      <div class="perk"><b>教育訓練津貼</b><span>跨院學習資源與講師課程</span></div>
+      <div class="perk"><b>員工價</b><span>院內商品與醫療員工價</span></div>
     </div>
   </div>
 </section>
@@ -528,8 +656,8 @@ const BRANCHES = [
   {id:"jianguo",rz:"高雄",name:"建國分院",city:"高雄市苓雅區建國一路 193、195 號",focus:"家醫科主軸",
    pos:"以家醫科為主軸，專注第一線疾病辨識與醫療分級的關鍵判斷，適合打好臨床基礎與飼主溝通能力。週工時約 40 小時，排班可與同事協調。",
    tags:["家醫科","第一線判斷","醫療分級","飼主溝通"],
-   people:[], phone:"07-7518876",
-   jobs:[["主治獸醫師","約 6–18 萬"],["大夜班醫師","詳情面談"]]}
+   people:[], phone:"07-7518876", jd:true,
+   jobs:[["主治獸醫師","6–14 萬＋抽成"],["大夜班主治（急診）","15 萬起＋抽成"]]}
 ];
 const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 const tabs = document.getElementById("tabs"), cards = document.getElementById("cards");
@@ -557,7 +685,7 @@ function render(i, push){
       <div class="tags">${b.tags.map(t => `<span>${esc(t)}</span>`).join("")}</div>
       ${b.phone ? `<span class="meta">電話 <span style="user-select:all">${esc(b.phone)}</span></span>` : ""}
       <div class="jobs">${jobs}</div>
-      <a class="apply-link" href="${FORM}" target="_blank" rel="noopener">應徵${esc(b.name)} ↗</a>
+      ${b.jd ? `<a class="apply-link" href="#jobs">看完整職務說明 ↓</a>` : `<a class="apply-link" href="${FORM}" target="_blank" rel="noopener">應徵${esc(b.name)} ↗</a>`}
     </div>`;
   cards.innerHTML = people + info;
   cards.classList.remove("swap"); void cards.offsetWidth; cards.classList.add("swap");
