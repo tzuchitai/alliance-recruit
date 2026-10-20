@@ -92,9 +92,16 @@ section{padding-block:104px}
 .duo{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;margin-top:40px}
 .tile{border-radius:10px;overflow:hidden;background:var(--soft);min-width:0}
 .tile.stats{display:grid;grid-template-columns:auto repeat(2,minmax(0,1fr));gap:28px;align-items:center;padding:20px 32px 20px 20px}
-.tile.stats img{width:120px;height:120px;object-fit:cover;object-position:top;border-radius:8px;background:#fff}
-.tile.stats b{display:block;font-weight:400;font-size:clamp(1.8rem,3vw,2.4rem);line-height:1.1;letter-spacing:-.02em}
-.tile.stats span{display:block;font-size:.76rem;color:var(--muted);margin-top:6px}
+.hiring{width:120px;height:120px;border-radius:8px;background:var(--gold);color:#1F2328;display:grid;place-items:center;align-content:center;gap:2px;text-align:center}
+.hiring b{font-size:2.6rem;font-weight:700;line-height:1}
+.hiring span{font-size:.62rem;font-weight:600;letter-spacing:.16em}
+.hiring em{font-style:normal;font-size:.72rem;font-weight:500}
+.opening{display:block;text-decoration:none;padding:6px 0 6px 22px;border-left:1px solid var(--line);min-width:0;transition:transform .15s}
+.opening:hover{transform:translateX(3px)}
+.opening small{display:block;font-size:.74rem;color:var(--muted)}
+.opening b{display:block;font-weight:500;font-size:clamp(1.3rem,2.2vw,1.7rem);line-height:1.3;margin-top:2px}
+.opening span{display:block;font-size:.84rem;color:var(--gold-ink);font-weight:600;margin-top:4px}
+.opening b::after{content:" →";font-weight:300;color:var(--muted)}
 
 /* ===== BRANCHES ===== */
 .dept{background:var(--soft);margin-top:104px}
@@ -316,7 +323,10 @@ footer .edu .mark{height:22px}
   .hero-copy{padding:16px 18px 0}
   .float{left:14px;right:14px;bottom:14px;max-width:none}
   .tile.stats{grid-template-columns:repeat(2,minmax(0,1fr));padding:20px}
-  .tile.stats img{display:none}
+  .tile.stats{grid-template-columns:minmax(0,1fr)}
+  .hiring{width:auto;height:auto;padding:14px;grid-auto-flow:column;gap:10px;justify-content:start}
+  .hiring b{font-size:1.6rem}
+  .opening{border-left:0;border-top:1px solid var(--line);padding:14px 0 0}
   .card-row{grid-template-columns:repeat(2,minmax(0,1fr))}
   .icard,.icard.wide{grid-column:1/-1}
   .ladder,.learn-list,.hl,.perks{grid-template-columns:minmax(0,1fr)}
@@ -373,9 +383,9 @@ footer .edu .mark{height:22px}
     </div>
     <div class="duo">
       <div class="tile stats">
-        <img src="photos/dir-tai.jpg" alt="戴子綺醫師" loading="lazy">
-        <div><b>45,000</b><span>無經驗起薪（元／月）</span></div>
-        <div><b>6–18 萬</b><span>主治醫師月收入區間</span></div>
+        <div class="hiring"><b>徵</b><span>NOW HIRING</span><em>建國分院</em></div>
+        <a class="opening" href="#jobs"><small>全職・排班制</small><b>主治獸醫師</b><span>6–14 萬＋抽成・臨床 2 年以上</span></a>
+        <a class="opening" href="#jobs"><small>固定大夜班 21:30–09:30</small><b>大夜班主治獸醫師</b><span>15 萬起＋抽成・夜間急診</span></a>
       </div>
     </div>
   </div>
