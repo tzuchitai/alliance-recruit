@@ -14,6 +14,11 @@ def b64(name):
     return "data:image/png;base64," + base64.b64encode((root / "assets" / name).read_bytes()).decode()
 
 
+import json
+_en = root / "i18n_en.json"
+_dict = json.loads(_en.read_text(encoding="utf-8")) if _en.exists() else {}
+_dict_js = json.dumps(_dict, ensure_ascii=False).replace("</", "<\\/")
+src = src.replace("__I18N_EN__", _dict_js)
 body = src.replace("__ALLIANCE__", b64("alliance-logo.png")).replace("__EDU__", b64("edu-mark.png"))
 body = body.replace("__WORLD__", (root / "assets" / "world-110m.json").read_text(encoding="utf-8")).replace("__TW__", (root / "assets" / "taiwan-50m.json").read_text(encoding="utf-8"))
 
