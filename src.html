@@ -76,6 +76,15 @@ section{padding-block:104px}
 @media (max-width:420px){.tb-brand .mark.alliance{width:118px}.tb-in{gap:10px}}
 .hero{padding-top:16px}
 
+/* ===== FILM ===== */
+.film{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.7fr);gap:40px;align-items:center;margin-bottom:56px;padding:28px;border-radius:16px;background:var(--soft)}
+.film-txt .eyebrow{margin-bottom:8px}
+.film-txt h2{font-size:clamp(1.4rem,2.6vw,2rem);font-weight:600;line-height:1.4}
+.film-txt p{margin-top:12px;color:var(--muted);font-size:.92rem}
+.film-txt .meta{display:inline-block;margin-top:14px;font-size:.78rem;font-weight:600;color:var(--gold-ink);background:var(--gold-tint);padding:4px 10px;border-radius:999px}
+.film video{width:100%;aspect-ratio:16/9;border-radius:12px;background:#1F2328;display:block;box-shadow:0 18px 40px -20px rgba(0,0,0,.35)}
+@media (max-width:860px){.film{grid-template-columns:minmax(0,1fr);gap:18px;padding:20px}}
+
 /* ===== HOME TILES ===== */
 .home{padding-block:56px 40px}
 .home-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:24px}
@@ -771,6 +780,17 @@ footer .edu .mark{height:22px}
 <main>
 <section class="home" id="home">
   <div class="wrap">
+    <div class="film" id="film">
+      <div class="film-txt">
+        <p class="eyebrow">卓越講堂開場影片</p>
+        <h2>一個人可以走很快，一群人可以走更遠</h2>
+        <p>從一次心跳開始，走過病例討論、職涯階梯，一路到台灣 9 間、美國加州 1 間院所。</p>
+        <span class="meta">2 分 44 秒・建議開啟聲音</span>
+      </div>
+      <video controls preload="none" playsinline poster="media/lecture-opener-poster.jpg" aria-label="卓越講堂開場影片">
+        <source src="media/lecture-opener.mp4" type="video/mp4">
+      </video>
+    </div>
     <div class="home-head"><div><p class="eyebrow">從這裡開始</p><h2 class="h2">你想先了解哪一部分？</h2></div><p class="lead" style="max-width:24em">點選有興趣的主題，或從左上角「目錄」隨時切換。</p></div>
     <div class="tiles"><div class="tile-c"><span class="n">01</span><h3>認識聯盟</h3><p>我們是誰、由誰創立、事業版圖</p><ul><li><a href="#about">聯盟簡介</a></li><li><a href="#value">連鎖體系的價值</a></li><li><a href="#founder">創辦人</a></li><li><a href="#group">寵物百分百事業群</a></li></ul></div><div class="tile-c hot"><span class="n">02</span><h3>職缺與分院</h3><p>正在招募的職位與各院專科方向</p><ul><li><a href="#jobs">公告中的職缺</a></li><li><a href="#teaching">教學人才徵才</a></li><li><a href="#talent">臨床與教學人才計畫</a></li><li><a href="#branches">各分院定位</a></li></ul></div><div class="tile-c"><span class="n">03</span><h3>職涯與培育</h3><p>升遷路徑、學習制度與專科發展</p><ul><li><a href="#philosophy">職涯主軸</a></li><li><a href="#ladder">職涯成長階梯</a></li><li><a href="#learning">學習與培育制度</a></li><li><a href="#assistants">獸醫醫事助理培育</a></li><li><a href="#eye">眼科種子與線上討論會</a></li><li><a href="#tvesa">台灣獸醫卓越永續協會</a></li><li><a href="#advisors">醫療顧問</a></li></ul></div><div class="tile-c"><span class="n">04</span><h3>工作與待遇</h3><p>薪資福利、工作環境與團隊日常</p><ul><li><a href="#pay">薪資與福利</a></li><li><a href="#environment">工作環境</a></li><li><a href="#done">我們做過的事</a></li><li><a href="#honest">先說清楚的事</a></li></ul></div><div class="tile-c"><span class="n">05</span><h3>加入我們</h3><p>常見問題、教育中心的話與應徵方式</p><ul><li><a href="#faq">常見問題</a></li><li><a href="#apply">教育中心的話・應徵</a></li></ul></div></div>
   </div>
